@@ -1,0 +1,268 @@
+---
+layout: default
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader}}
+
+<!-- Mobile Navbar-->
+{{> mobile-navbar}}
+
+<!-- Main Sidebar-->
+{{> shop-sidebar}}
+
+<!-- FAB -->
+{{> flying-button}}
+
+<!-- Categories Right quickview -->
+{{> quickview-categories}}
+
+<!-- Shop quickview -->
+{{> quickview-main}}
+
+<!-- Cart quickview -->
+{{> quickview-cart}}
+
+
+<!-- Main wrapper -->
+<div class="shop-wrapper">
+
+    {{> search-overlay}}
+
+    <!-- Main section -->
+    <div id="cart-page" class="section">
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Cart page -->
+            <div class="columns account-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <div class="account-title">
+                        <h2>MY CART</h2>
+                        <img class="brand-filigrane" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                    </div>
+
+                    <!-- Account tabs -->
+                    <div class="tabs account-tabs">
+                        <ul>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li class="is-active"><a href="cart.html">Cart</a></li>
+                            <li><a href="orders.html">Orders</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="cart-main-placeholder" class="main-placeholder is-hidden">
+                        <div class="placeholder-content">
+                            <img src="assets/img/illustrations/shop.svg" alt="">
+                            <h3>Empty Cart</h3>
+                            <p>Your shopping cart is currently empty. Start adding products to be able to checkout.</p>
+                            <div class="button-wrap">
+                                <a href="products.html" class="button big-button primary-button rounded raised">Continue Shopping</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Layout -->
+                    <div class="columns is-account-grid is-multiline">
+                        <!--Loader-->
+                        <div class="account-loader is-active">
+                            <div class="loader is-loading"></div>
+                        </div>
+                        <!-- Product list -->
+                        <div id="cart-page-products" class="column is-8">
+                            <!-- Product -->
+                            <div class="flat-card is-auto cart-card product-container" data-product-id="">
+                                <ul class="cart-content">
+                                    <li>
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999"
+                                            data-demo-src="assets/img/products/office6.png" alt="">
+                                        <span class="product-info">
+                                            <span>The Conqueror</span>
+                                            <span>Office</span>
+                                        </span>
+                                        <span class="product-price">
+                                            <span>Price</span>
+                                            <span>385.00</span>
+                                        </span>
+
+                                        <div data-trigger="spinner" class="main-cart-spinner">
+                                            <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner" data-rule="quantity"
+                                                data-min="1" data-max="99">
+                                            <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                                <i data-feather="minus"></i>
+                                            </a>
+                                            <span class="spinner-value">1</span>
+                                            <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                                                <i data-feather="plus"></i>
+                                            </a>
+                                        </div>
+
+                                        <span class="action">
+                                            <span class="action-link is-remove has-simple-popover" data-content="Remove from Cart"
+                                                data-placement="top">
+                                                <a href="#"><i class="feather-icons" data-feather="trash-2"></i></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Product -->
+                            <div class="flat-card is-auto cart-card product-container" data-product-id="">
+                                <ul class="cart-content">
+                                    <li>
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999"
+                                            data-demo-src="assets/img/products/office7.gif" alt="">
+                                        <span class="product-info">
+                                            <span>The Gentleman</span>
+                                            <span>Office</span>
+                                        </span>
+                                        <span class="product-price">
+                                            <span>Price</span>
+                                            <span>329.00</span>
+                                        </span>
+
+                                        <div data-trigger="spinner" class="main-cart-spinner">
+                                            <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner" data-rule="quantity"
+                                                data-min="1" data-max="99">
+                                            <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                                <i data-feather="minus"></i>
+                                            </a>
+                                            <span class="spinner-value">1</span>
+                                            <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                                                <i data-feather="plus"></i>
+                                            </a>
+                                        </div>
+
+                                        <span class="action">
+                                            <span class="action-link is-remove has-simple-popover" data-content="Remove from Cart"
+                                                data-placement="top">
+                                                <a href="#"><i class="feather-icons" data-feather="trash-2"></i></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Product -->
+                            <div class="flat-card is-auto cart-card product-container" data-product-id="">
+                                <ul class="cart-content">
+                                    <li>
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999"
+                                            data-demo-src="assets/img/products/kids7.jpg" alt="">
+                                        <span class="product-info">
+                                            <span>Child Desk</span>
+                                            <span>Kids</span>
+                                        </span>
+                                        <span class="product-price">
+                                            <span>Price</span>
+                                            <span>278.00</span>
+                                        </span>
+
+                                        <div data-trigger="spinner" class="main-cart-spinner">
+                                            <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner" data-rule="quantity"
+                                                data-min="1" data-max="99">
+                                            <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                                <i data-feather="minus"></i>
+                                            </a>
+                                            <span class="spinner-value">1</span>
+                                            <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                                                <i data-feather="plus"></i>
+                                            </a>
+                                        </div>
+
+                                        <span class="action">
+                                            <span class="action-link is-remove has-simple-popover" data-content="Remove from Cart"
+                                                data-placement="top">
+                                                <a href="#"><i class="feather-icons" data-feather="trash-2"></i></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Product -->
+                            <div class="flat-card is-auto cart-card product-container" data-product-id="">
+                                <ul class="cart-content">
+                                    <li>
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999"
+                                            data-demo-src="assets/img/products/access4.jpg" alt="">
+                                        <span class="product-info">
+                                            <span>Design Shelf</span>
+                                            <span>House</span>
+                                        </span>
+                                        <span class="product-price">
+                                            <span>Price</span>
+                                            <span>529,00</span>
+                                        </span>
+
+                                        <div data-trigger="spinner" class="main-cart-spinner">
+                                            <input class="hidden-spinner" type="hidden" value="1" data-spin="spinner" data-rule="quantity"
+                                                data-min="1" data-max="99">
+                                            <a class="spinner-button is-remove" href="javascript:;" data-spin="down">
+                                                <i data-feather="minus"></i>
+                                            </a>
+                                            <span class="spinner-value">1</span>
+                                            <a class="spinner-button is-add" href="javascript:;" data-spin="up">
+                                                <i data-feather="plus"></i>
+                                            </a>
+                                        </div>
+
+                                        <span class="action">
+                                            <span class="action-link is-remove has-simple-popover" data-content="Remove from Cart"
+                                                data-placement="top">
+                                                <a href="#"><i class="feather-icons" data-feather="trash-2"></i></a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /Product -->
+                        </div>
+                        <!--Cart Summary-->
+                        <div class="column is-4">
+                            <div class="flat-card cart-order-summary">
+                                <div class="button-wrap">
+                                    <div class="summary-header">
+                                        <i data-feather="shopping-cart"></i>
+                                        <div><var id="cart-page-count">5</var> <span>Item(s) in Cart</span></div>
+                                    </div>
+                                    <div class="cart-summary-list">
+                                        <div class="summary-item">
+                                            <span>Subtotal</span>
+                                            <span id="cart-summary-subtotal" class="amount">0.00</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span>Taxes</span>
+                                            <span id="cart-summary-taxes" class="amount">0.00</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span>Shipping</span>
+                                            <span id="cart-summary-shipping" class="amount">0.00</span>
+                                        </div>
+                                        <div class="summary-item is-bold">
+                                            <span>Total</span>
+                                            <span id="cart-summary-total" class="amount">0.00</span>
+                                        </div>
+                                    </div>
+                                    <button id="init-checkout"
+                                        class="button is-fullwidth feather-button is-bold primary-button raised is-rounded">Checkout</button>
+                                    <button id="update-cart-page"
+                                        class="button is-fullwidth feather-button is-bold secondary-button raised is-rounded is-hidden">Update
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Cart Layout -->
+                </div>
+            </div>
+            <!-- /Cart page -->
+
+        </div>
+        <!-- /Container -->
+    </div>
+    <!-- /Main section -->
+</div>
+<!-- /Main wrapper -->
+
+<!-- Add to Wishlist Modal -->
+{{> add-to-wishlist-modal}}

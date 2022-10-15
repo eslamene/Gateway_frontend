@@ -1,0 +1,42 @@
+---
+layout: default
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader}}
+
+<!-- Mobile Navbar-->
+{{> mobile-navbar}}
+
+<!-- Main Sidebar-->
+{{> shop-sidebar}}
+
+<!-- FAB -->
+{{> flying-button}}
+
+<!-- Categories Right quickview -->
+{{> quickview-categories}}
+
+<!-- Shop quickview -->
+{{> quickview-main}}
+
+<!-- Cart quickview -->
+{{> quickview-cart}}
+
+
+<!-- Content Wrapper -->
+<div class="shop-wrapper has-error">
+
+    {{> search-overlay}}
+
+    <div class="error-wrapper">
+        <div class="error-code">
+            500
+        </div>
+        <img src="assets/img/illustrations/error2.svg" alt="">
+        <h2>Internal server error.</h2>
+        <p>Sorry, the server encountered a critical server error. Please contact support.</p>
+        <a href="./" class="button is-solid primary-button raised is-rounded">Back To Home</a>
+    </div>
+</div>
+<!-- /Content Wrapper -->

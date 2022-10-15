@@ -1,0 +1,67 @@
+<div id="add-to-wishlist-modal" class="modal add-to-wishlist-modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="box">
+            <div class="box-header">
+                <img src="assets/img/logo/nephos-greyscale.svg" alt="">
+                <span>ADD TO WISHLIST</span>
+                <div class="modal-delete"><i data-feather="x"></i></div>
+            </div>
+            <div class="box-body">
+                <div class="inner-content">
+                    <div id="existing-product-message" class="message is-link has-close-icon is-hidden">
+                        <div class="message-body">
+                            <a class="close-icon">
+                                <i data-feather="x"></i>
+                            </a>
+                            This product already exists in the selected wishlist. Please try another one.
+                        </div>
+                    </div>
+                    <div id="wishlist-modal-list-placeholder" class="modal-placeholder is-hidden">
+                        <div class="placeholder-content">
+                            <img src="assets/img/illustrations/bed.svg" alt="">
+                            <h3>No Wishlists</h3>
+                            <p>You currently don't have any wishlist saved. Start by creating one.</p>
+                            <div class="button-wrap">
+                                <a href="wishlist.html"
+                                    class="button big-button primary-button rounded raised modal-delete">Add
+                                    Wishlist</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wishlist-modal-list" class="wishlist-modal-list">
+                        <p>Add a new sub list to classify your wishlist items. You can then manage them and find them
+                            more
+                            easily.</p>
+                        <ul>
+                            <li class="list-item is-active">
+                                <div class="meta">
+                                    <span class="name">Title</span>
+                                    <span class="count"><var>0</var> Items</span>
+                                </div>
+                                <div class="selected-indicator">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="meta">
+                                    <span class="name">Title</span>
+                                    <span class="count"><var>0</var> Items</span>
+                                </div>
+                                <div class="selected-indicator">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="button-wrap">
+                            <button type="submit"
+                                class="button add-to-wishlist-action is-fullwidth feather-button is-bold primary-button raised">
+                                Add To Wishlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

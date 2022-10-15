@@ -1,0 +1,169 @@
+/*! _sidebar.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Main left sidebar
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Main Shop Sidebar
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Main Shop Sidebar
+========================================================================== */
+
+.main-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    background-color: $white;
+    box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.02);
+    border-right: 1px solid $fade-grey;
+    z-index: 10;
+    transition: all .3s;
+
+    //Mobile pushed state
+    &.is-pushed-mobile {
+        transform: translateX(-100%) !important;
+    }
+
+    //icon brand
+    .sidebar-brand {
+        width: 80px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fcfcfc;
+        border-right: 1px solid $fade-grey;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    //inner wrapper
+    .sidebar-inner {
+        height: calc(100% - 60px);
+        width: 100%;
+        position: relative;
+
+        //menus settings
+        .icon-menu, .bottom-menu {
+            li {
+                width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.fold-link {
+                    display: none;
+                }
+
+                a {
+                    display: block;
+                    position: relative;
+                    max-height: 20px;
+                    transform: rotate(0);
+                    opacity: 1;
+                    transition: all .3s;
+
+                    svg {
+                        stroke: $title-grey;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    //active icon state
+                    &:hover svg, &.is-active svg {
+                        stroke: $primary;
+                    }
+
+                    //dot that informs that there are items inside the cart
+                    .cart-items {
+                        position: absolute;
+                        top: -6px;
+                        right: -9px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 9px;
+                        background: $primary;
+                        font-weight: 700;
+                    }
+
+                    //icon toggle states
+                    &.is-opened {
+                        transform: rotate(360deg);
+                        opacity: 0;
+                    }
+
+                    &.is-inactive {
+                        transform: rotate(-360deg);
+                        opacity: 0;
+                    }
+                }
+
+                #open-filters {
+                    svg {
+                        transform: rotate(0);
+                        transition: all .3s;
+                    }
+
+                    &:hover {
+                        svg {
+                            transform: rotate(145deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        //bottom logout menu positioning
+        .bottom-menu {
+            position: absolute;
+            bottom: 0;
+            padding: 0;
+
+            li {
+                position: relative;
+
+                .small-auth-loader {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: $white;
+                    opacity: 0;
+                    pointer-events: none;
+                    z-index: 1;
+                    transition: all .3s;
+
+                    &.is-active {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+
+                    .loader {
+                        height: 1.5rem;
+                        width: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

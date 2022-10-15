@@ -1,0 +1,995 @@
+/*! _account.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Account pages styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+1. Account Header
+2. Tabs
+3. Placeholder
+4. Profile Card
+5. Details Card
+6. Wishlists
+7. Avatar Upload
+=============================================================================
+***/
+
+/* ==========================================================================
+1. Account Header
+========================================================================== */
+
+//Page title
+.account-header {
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 400 !important;
+        text-transform: uppercase;
+    }
+
+    .account-title {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        .title-back {
+            position: relative;
+            height: 43px;
+            width: 43px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+
+            svg {
+                height: 26px;
+                width: 26px;
+                stroke: $dark-text;
+            }
+        }
+
+        h2 {
+            width: 100%;
+        }
+
+        //icon
+        .account-icon {
+            width: 100%;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            img {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                display: block;
+            }
+
+            span {
+                text-transform: uppercase;
+                font-size: 80%;
+                color: $accent-grey;
+                display: block;
+            }
+        }
+
+        //Filigrane Logo
+        .brand-filigrane {
+            position: absolute;
+            top: -20px;
+            left: -40px;
+            height: 80px;
+            opacity: 0.4;
+        }
+    }
+}
+
+/* ==========================================================================
+2. Tabs
+========================================================================== */
+
+.account-tabs {
+    margin-top: 1.5rem;
+
+    li {
+        a {
+            color: $muted-grey;
+            border-width: 2px;
+            padding-bottom: 15px;
+
+            &:hover {
+                color: $muted-grey;
+                border-color: $muted-grey;
+            }
+        }
+
+        &.is-active {
+            a {
+                color: $primary;
+                border-color: $primary;
+            }
+        }
+    }
+
+    //Suppressing margins when there are controls
+    &.has-controls {
+        margin-bottom: 0 !important;
+    }
+}
+
+.is-account-grid {
+    position: relative;
+    min-height: 480px;
+
+    .account-loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .3s;
+        z-index: 10;
+
+        &.is-active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .loader {
+            height: 5rem;
+            width: 5rem;
+
+            &.is-pulled {
+                position: relative;
+                top: -10%;
+            }
+
+            &.is-pulled-lg {
+                position: relative;
+                top: -25%;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+3. Placeholder
+========================================================================== */
+
+.main-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+
+    .placeholder-content {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        text-align: center;
+
+        img {
+            display: block;
+            max-width: 230px;
+            margin: 0 auto 20px auto;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: $dark-text;
+        }
+
+        p {
+            color: $muted-grey;
+        }
+
+        .button-wrap {
+            margin: 20px 0;
+
+            .button {
+                min-width: 200px;
+            }
+        }
+
+        > a {
+            font-size: .9rem;
+            color: $muted-grey;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+4. Profile Card
+========================================================================== */
+
+.profile-card {
+    border: none;
+    margin-bottom: 20px;
+
+    //Body
+    .card-body {
+        padding: 20px 40px;
+    }
+
+    //Avatar
+    .profile-image {
+        img {
+            display: block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    //User Meta
+    .username {
+        padding-top: 10px;
+
+        span, small {
+            display: block;
+        }
+
+        span {
+            color: $dark-text;
+            font-weight: 500;
+        }
+
+        small {
+            font-size: 0.85rem;
+            color: $muted-grey;
+        }
+    }
+
+    //Achievment footers
+    .profile-footer {
+        padding: 16px;
+        background: #fcfcfc;
+
+        .achievement-title {
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: .75rem;
+            color: $muted-grey;
+            display: block;
+        }
+
+        .count {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $dark-text;
+            line-height: 1;
+        }
+    }
+}
+
+/* ==========================================================================
+5. Details Card
+========================================================================== */
+
+//Cards that display information
+.profile-info-card, .menu-card {
+    margin-bottom: 20px;
+    position: relative;
+
+    &.is-billing {
+        position: relative;
+        z-index: 2;
+    }
+
+    &.is-shipping {
+        position: relative;
+        z-index: 1;
+    }
+
+    //Title
+    .card-title {
+        position: relative;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        background: $smoke-white;
+        z-index: 2;
+
+        h3 {
+            font-weight: 500;
+            color: $muted-grey-bold;
+        }
+
+        //Edit button
+        .edit-account {
+            position: relative;
+            height: 40px;
+            width: 40px;
+            max-height: 40px;
+
+            svg {
+                transition: all .3s;
+                transform: rotate(0);
+                height: 18px;
+                width: 18px;
+                stroke-width: 1.6px;
+            }
+
+            a {
+                color: grey;
+                height: 40px;
+                width: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1.8px dashed $muted-grey;
+                border-radius: 50%;
+                max-height: 40px;
+                transition: all .3s;
+
+                span {
+                    font-size: 90% !important;
+                    padding-left: 5px;
+                }
+
+                &:hover {
+                    border: 1.8px solid $primary;
+
+                    svg {
+                        stroke: $primary;
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        //Confirm button
+        .confirm-button {
+            position: relative;
+            height: 40px;
+            width: 40px;
+            max-height: 40px;
+
+            svg {
+                transition: all .3s;
+                transform: rotate(0);
+                stroke-width: 1.2px;
+            }
+
+            a {
+                color: grey;
+                height: 40px;
+                width: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1.8px dashed $muted-grey;
+                border-radius: 50%;
+                max-height: 40px;
+                transition: all .5s;
+
+                span {
+                    font-size: 90% !important;
+                    padding-left: 5px;
+                }
+
+                &:hover {
+                    border: 1.8px solid $green;
+
+                    svg {
+                        stroke: $green;
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+
+    //Body
+    .card-body {
+        padding: 20px;
+
+        .info-block {
+            margin-bottom: 16px;
+
+            label {
+                &.label-text {
+                    span {
+                        &:first-child {
+                            color: $dark-text;
+                            font-weight: 500;
+                            font-size: 0.85rem;
+                        }
+                    }
+                }
+            }
+
+            span {
+                display: block;
+
+                &.label-value {
+                    color: $muted-grey-bold;
+                }
+            }
+        }
+
+        .main-address {
+            position: relative;
+            top: 1px;
+            font-size: 0.8rem;
+            color: $muted-grey-bold;
+        }
+    }
+
+    //Dark background cards
+    &.is-dark {
+        background: $sidebar;
+        color: $white;
+
+        //Achievement card
+        &.is-achievement {
+            //Body
+            .card-body {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                img {
+                    height: 45px;
+                }
+
+                //Title
+                .achievement-name {
+                    padding: 0 10px;
+
+                    span {
+                        display: block;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 500;
+
+                        &:first-child {
+                            text-transform: uppercase;
+                            font-size: 0.8rem;
+                            font-family: 'Raleway', sans-serif;
+                        }
+
+                        &.is-gold {
+                            color: #ffd700;
+                        }
+
+                        &.is-green {
+                            color: $green;
+                        }
+
+                        &:nth-child(2) {
+                            font-size: .75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Overflow modifier
+    &.has-overflow {
+        overflow: visible !important;
+
+        //Chosen Select
+        .chosen-single {
+            max-height: 36px;
+
+            span {
+                max-height: 36px;
+                display: block;
+                position: relative;
+                top: -42.5px;
+                left: -8px;
+            }
+        }
+
+        //js Switch
+        .switch-wrapper {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    //Card background icon
+    .card-bg {
+        position: absolute;
+        right: -32px;
+        bottom: 6px;
+        height: 160px;
+        opacity: 0.3;
+    }
+}
+
+/* ==========================================================================
+6. Wishlists
+========================================================================== */
+
+//Wishlists menu
+.menu-card {
+    //Menu List
+    .wishlists {
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-top: 1px solid $fade-grey;
+            cursor: pointer;
+
+            a {
+                padding: 10px 0;
+                color: $muted-grey;
+                font-size: .8rem;
+                text-transform: uppercase;
+            }
+
+            //Active State
+            &.is-active {
+                background: darken($smoke-white, 1%);
+
+                a {
+                    color: $dark-text !important;
+                    font-weight: 500;
+                }
+
+                .action-block {
+                    display: flex;
+                }
+            }
+
+            &:first-child {
+                border-top: none !important;
+            }
+
+            &:hover {
+                background: $smoke-white;
+
+                a {
+                    color: $muted-grey-bold;
+                }
+            }
+
+            .action-block {
+                display: none;
+                align-items: center;
+                justify-content: flex-end;
+
+                span {
+                    display: block;
+                    color: $muted-grey;
+                    font-size: .9rem;
+                }
+
+                .remove-button {
+                    height: 36px;
+                    width: 36px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 6px;
+                    background: none;
+                    border: none;
+                    outline: none !important;
+                    cursor: pointer;
+
+                    &:hover {
+                        svg {
+                            stroke: $primary;
+                        }
+                    }
+
+                    svg {
+                        height: 18px;
+                        width: 18px;
+                        stroke-width: 1.4px;
+                        stroke: $placeholder;
+                        transition: stroke .3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//List of wishlist items
+.wishlist-card {
+    overflow: visible;
+
+    .wishlist {
+        .placeholder-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 450px;
+
+            .placeholder-content {
+                width: 100%;
+                max-width: 340px;
+                margin: 0 auto;
+                text-align: center;
+
+                img {
+                    display: block;
+                    max-width: 230px;
+                    margin: 0 auto 20px auto;
+                }
+
+                h3 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: $dark-text;
+                }
+
+                p {
+                    color: $muted-grey;
+                }
+            }
+        }
+
+        //item
+        .wishlist-item {
+            border-top: 1px solid $fade-grey;
+
+            &:first-child {
+                border-top: none !important;
+            }
+
+            span {
+                display: block;
+            }
+
+            //Wrapper
+            .item-wrapper {
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 10px 40px;
+
+                &:hover {
+                    .on-sale {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                //Image
+                img {
+                    height: 80px;
+                }
+
+                //Product meta
+                .product-info span, .product-info a {
+                    &:first-child {
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 600;
+                        font-size: .9rem;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 70%;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        color: $muted-grey-bold;
+                    }
+                }
+
+                //Actions
+                .action {
+                    margin-left: auto;
+                    display: flex;
+
+                    .add-button, .remove-button {
+                        position: relative;
+
+                        .add-button-inner, .remove-button-inner {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            color: $muted-grey;
+                            border: 1.6px dashed transparent;
+                            height: 40px;
+                            width: 40px;
+                            max-height: 40px;
+                            border-radius: 50%;
+                            background: $white;
+                            z-index: 1;
+                            transition: all .3s;
+
+                            svg {
+                                width: 18px;
+                                height: 18px;
+                                transition: all .3s;
+                                transform: rotate(0);
+                                stroke-width: 1.2px;
+                            }
+                        }
+
+                        &:hover {
+                            .add-button-inner, .remove-button-inner {
+                                border: 1.8px solid $primary;
+
+                                svg {
+                                    stroke: $primary;
+                                }
+                            }
+                        }
+                    }
+
+                    //Dropdown
+                    .dropdown-button {
+                        position: relative;
+                        height: 40px;
+                        width: 40px;
+                        max-height: 40px;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            transition: all .3s;
+                            transform: rotate(0);
+                            stroke-width: 1.2px;
+                        }
+
+                        a {
+                            color: grey;
+                            height: 40px;
+                            width: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 1.8px dashed $muted-grey;
+                            border-radius: 50%;
+                            max-height: 40px;
+                            transition: all .3s;
+
+                            span {
+                                font-size: 90% !important;
+                                padding-left: 5px;
+                            }
+
+                            &:hover {
+                                border: 1.8px solid $primary;
+
+                                svg {
+                                    stroke: $primary;
+                                }
+                            }
+                        }
+                    }
+
+                    //Dropdown list item
+                    .dropdown-item {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        span {
+                            display: block;
+                            margin-left: 15px;
+                            color: $dark-text;
+                        }
+
+                        svg {
+                            height: 18px;
+                            width: 18px;
+                            stroke-width: 1.2px;
+                            stroke: $placeholder;
+                        }
+
+                        &:hover {
+                            svg {
+                                stroke: $primary;
+                            }
+                        }
+                    }
+                }
+
+                //Sales indicator
+                .on-sale {
+                    position: absolute;
+                    top: -15px;
+                    left: -15px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: $primary;
+                    display: none;
+                    transform: rotate(0);
+                    transition: opacity .3s;
+
+                    svg {
+                        height: 12px;
+                        width: 12px;
+                        stroke: $white;
+                        stroke-width: 3px !important;
+                        transform: rotate(0) translate(5px, 5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Wishlist pagination
+.wishlist-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+
+    //list
+    ul {
+        //Pagination Item
+        li {
+            display: inline-block;
+            margin: 0 5px;
+            transition: all .3s;
+            cursor: pointer;
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background: $muted-grey;
+                font-size: .9rem;
+                color: $white;
+                transition: inherit;
+            }
+
+            //Active state
+            &.is-active {
+                span {
+                    background: $primary;
+                    font-weight: 500;
+                    box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.18) !important;
+                }
+            }
+
+            &:hover {
+                opacity: 0.7;
+
+                span {
+                    box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.18) !important;
+                }
+            }
+        }
+    }
+}
+
+//Edit Account
+.avatar-wrapper {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+
+    //box-shadow: 1px 1px 15px -5px black;
+    transition: all .3s ease;
+
+    &:hover {
+        //transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    &:hover .profile-pic {
+        opacity: .5;
+    }
+
+    .profile-pic {
+        height: 100%;
+        width: 100%;
+        transition: all .3s ease;
+
+        &:after {
+            font-family: FontAwesome;
+
+            //content: "\f083";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            font-size: 60px;
+
+            //background: #ecf0f1;
+
+            color: #34495e;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .upload-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        .upload-icon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 0;
+            transition: all .3s ease;
+            stroke: $primary;
+        }
+
+        &:hover .upload-icon {
+            opacity: .9;
+        }
+    }
+}
+
+/* ==========================================================================
+7. Avatar Upload
+========================================================================== */
+
+//Card
+.upload-card {
+    overflow: visible;
+    padding: 40px 20px;
+
+    //user
+    .username {
+        padding: 10px 0;
+        font-weight: 500;
+
+        span {
+            display: block;
+
+            &:nth-child(2) {
+                font-size: 90%;
+                font-weight: 400;
+                color: $muted-grey-bold;
+            }
+        }
+    }
+
+    //Button
+    .button {
+        font-weight: 500 !important;
+        text-transform: uppercase;
+        margin: 0 auto !important;
+        min-width: 170px !important;
+    }
+}

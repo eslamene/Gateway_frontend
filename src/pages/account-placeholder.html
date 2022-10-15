@@ -1,0 +1,76 @@
+---
+layout: default
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader}}
+
+<!-- Mobile Navbar-->
+{{> mobile-navbar}}
+
+<!-- Main Sidebar-->
+{{> shop-sidebar}}
+
+<!-- FAB -->
+{{> flying-button}}
+
+<!-- Categories Right quickview -->
+{{> quickview-categories}}
+
+<!-- Shop quickview -->
+{{> quickview-main}}
+
+<!-- Cart quickview -->
+{{> quickview-cart}}
+
+
+<!-- Main wrapper -->
+<div class="shop-wrapper">
+
+    {{> search-overlay}}
+
+    <!-- Main section -->
+    <div id="account-page-empty" class="section">
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Account Layout -->
+            <div class="columns account-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <!-- Title -->
+                    <div class="account-title">
+                        <h2>ACCOUNT</h2>
+                        <img class="brand-filigrane" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                    </div>
+
+                    <!-- Account tabs -->
+                    <div class="tabs account-tabs">
+                        <ul>
+                            <li class="is-active"><a href="account.html">Account</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="orders.html">Orders</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="account-main-placeholder" class="main-placeholder">
+                        <div class="placeholder-content">
+                            <img src="assets/img/illustrations/profile.svg" alt="">
+                            <h3>Welcome, Guest</h3>
+                            <p>Guest users don't have accounts. Please login or register to view your account.</p>
+                            <div class="button-wrap">
+                                <a href="./authentication.html"
+                                    class="button big-button primary-button rounded raised">Log In</a>
+                            </div>
+                            <a>Don't have an account?</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Container -->
+    </div>
+    <!-- /Main section -->
+</div>
+<!-- /Main wrapper -->

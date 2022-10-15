@@ -1,0 +1,190 @@
+---
+layout: default
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader}}
+
+<!-- Main Sidebar-->
+{{> shop-sidebar}}
+
+<!-- Shop quickview -->
+{{> quickview-main}}
+
+<!-- Cart quickview -->
+{{> quickview-cart}}
+
+
+<!-- Action Bar -->
+<div class="action-bar is-centered">
+    <div class="steps-wrapper">
+        <ol class="step-list">
+            <li class="active"></li>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+</div>
+
+<!-- Main wrapper -->
+<div class="shop-wrapper">
+
+    {{> search-overlay}}
+
+    <!-- Main section -->
+    <div id="checkout-2" class="section no-padding">
+        <div class="checkout-wrapper" data-checkout-step="2">
+
+            <!--Checkout step 2-->
+            <div class="checkout-main">
+                <div class="checkout-container">
+                    <div class="checkout-shipping-methods">
+                        <h2>Shipping Method</h2>
+                        <p>Choose one of the below shipping methods to continue checkout.</p>
+
+                        <div class="shipping-methods-grid">
+                            <div class="columns is-multiline">
+                                <!--Shipping Method-->
+                                <div class="column is-6">
+                                    <div class="method-card" data-shipping-rate="0.00">
+                                        <input type="radio" name="shipping_methods">
+                                        <div class="method-card-inner">
+                                            <div class="icon-container">
+                                                <img src="assets/img/icons/checkout/freeShipping.svg" alt="">
+                                                <div class="indicator gelatine">
+                                                    <i data-feather="check"></i>
+                                                </div>
+                                            </div>
+                                            <div class="meta">
+                                                <h3>Free Shipping</h3>
+                                                <p>Delivery between 15, Oct to 18, Oct</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Shipping Method-->
+                                <div class="column is-6">
+                                    <div class="method-card" data-shipping-rate="8.50">
+                                        <input type="radio" name="shipping_methods">
+                                        <div class="method-card-inner">
+                                            <div class="icon-container">
+                                                <img src="assets/img/icons/checkout/fastShipping.svg" alt="">
+                                                <div class="indicator gelatine">
+                                                    <i data-feather="check"></i>
+                                                </div>
+                                            </div>
+                                            <div class="meta">
+                                                <h3>Express Shipping</h3>
+                                                <p>Delivery tomorrow before 9:00pm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Shipping Method-->
+                                <div class="column is-6">
+                                    <div class="method-card" data-shipping-rate="15.00">
+                                        <input type="radio" name="shipping_methods">
+                                        <div class="method-card-inner">
+                                            <div class="icon-container">
+                                                <img src="assets/img/icons/checkout/pickUpPoint.svg" alt="">
+                                                <div class="indicator gelatine">
+                                                    <i data-feather="check"></i>
+                                                </div>
+                                            </div>
+                                            <div class="meta">
+                                                <h3>Pick Up At Store</h3>
+                                                <p>Pick your order yourself</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Shipping Method-->
+                                <div class="column is-6">
+                                    <div class="method-card" data-shipping-rate="29.95">
+                                        <input type="radio" name="shipping_methods">
+                                        <div class="method-card-inner">
+                                            <div class="icon-container">
+                                                <img src="assets/img/icons/checkout/fedex.svg" alt="">
+                                                <div class="indicator gelatine">
+                                                    <i data-feather="check"></i>
+                                                </div>
+                                            </div>
+                                            <div class="meta">
+                                                <h3>Fedex Express</h3>
+                                                <p>Deliver by Fedex Express services</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-side">
+                <div class="side-header">
+                    <h2 class="side-title">Checkout</h2>
+                    <a class="button is-rounded checkout-back" data-checkout-step="2">Previous</a>
+                </div>
+                <div class="side-inner has-slimscroll">
+                    <div class="side-card user-card">
+                        <div class="avatar-container">
+                            <img id="checkout-avatar" src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/elie.jpg"
+                                alt="">
+                        </div>
+                        <div class="meta">
+                            <span>Checkout as</span>
+                            <span id="checkout-username">Elie Daniels</span>
+                        </div>
+                    </div>
+
+                    <div class="side-card is-address">
+                        <label class="form-switch">
+                            <input id="shipping-switch" type="checkbox" class="is-switch">
+                            <i></i>
+                        </label>
+                        <h3 class="address-title">Shipping Address</h3>
+                        <p class="address">
+                            <var id="shipping-address1">463 San Bernardo Ave</var>, <var id="shipping-address2">Crimson Road</var>
+                            <br><var id="shipping-city">Long Beach</var>, <var id="shipping-state">CA</var> <var
+                                id="shipping-postalCode">90808</var>
+                            <br><var id="shipping-country">United States</var>
+                        </p>
+                    </div>
+
+                    <div class="side-card is-totals">
+                        <h3 class="info-title">Payment Information</h3>
+                        <div class="payment-block">
+                            <span>Order subtotal</span>
+                            <span id="checkout-subtotal-value" class="has-price">200.37</span>
+                        </div>
+                        <div class="payment-block">
+                            <span>Order shipping</span>
+                            <span id="checkout-shipping-value" class="has-price">0.00</span>
+                        </div>
+                        <div class="payment-block">
+                            <span>Order tax</span>
+                            <span id="checkout-tax-value" class="has-price">7.82</span>
+                        </div>
+                        <div class="payment-block">
+                            <span class="is-bold">Order total</span>
+                            <span id="checkout-grandtotal-value" class="has-price is-bold">208.09</span>
+                        </div>
+                    </div>
+
+                    <div class="side-action">
+                        <button id="checkout-next" class="button primary-button raised is-fullwidth is-rounded">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Main section -->
+</div>
+<!-- /Main wrapper -->
+
+{{> checkout-block-modal}}
+
+{{> checkout-unauth-modal}}

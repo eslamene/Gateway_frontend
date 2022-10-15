@@ -1,0 +1,46 @@
+/*! _theme-green.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Green theme variables
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Variables
+1. Shadow variables
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Color Variables
+========================================================================== */
+
+$primary: #00d1b2;
+$secondary: #414272;
+$accent: #4A4DE8;
+
+/* ==========================================================================
+1. Shadow variables
+========================================================================== */
+
+//Base shadow
+$base-shadow: rgba(0, 0, 0, 0.12);
+
+//Light box shadow
+$light-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+
+//Primary box shadow
+$primary-shadow-from: rgba($primary, 0.42);
+$primary-shadow-to: rgba($primary, 0.2);
+$primary-box-shadow: 0 14px 26px -12px $primary-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $primary-shadow-to !important;
+
+//Secondary box shadow
+$secondary-shadow-from: rgba($secondary, 0.42);
+$secondary-shadow-to: rgba($secondary, 0.2);
+$secondary-box-shadow: 0 14px 26px -12px $secondary-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $secondary-shadow-to !important;
+
+//Accent box shadow
+$accent-shadow-from: rgba($accent, 0.42);
+$accent-shadow-to: rgba($accent, 0.2);
+$accent-box-shadow: 0 14px 26px -12px $accent-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $accent-shadow-to !important;

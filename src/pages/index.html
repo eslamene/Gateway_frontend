@@ -1,0 +1,954 @@
+---
+layout: demo
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader-full}}
+
+<section class="hero is-fullheight is-demo">
+    <div class="hero-head">
+
+        <nav id="navbar-clone" class="navbar is-fixed">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.html" class="navbar-item">
+                        <img src="assets/img/logo/nephos.svg" alt="">
+                        <span class="brand-name">Nephos</span>
+                    </a>
+                    <span class="navbar-burger burger" data-target="cloneNavbarMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id="cloneNavbarMenu" class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <a class="is-centered-responsive" href="home.html">Demo</a>
+                        </div>
+                        <div class="navbar-item">
+                            <a class="is-centered-responsive" href="https://docs.cssninja.io/nephos"
+                                target="_blank">Docs</a>
+                        </div>
+                        <div class="navbar-item">
+                            <a class="is-centered-responsive" href="https://support.cssninja.io" target="_blank">Support</a>
+                        </div>
+                        <div class="navbar-item">
+                            <a href="https://1.envato.market/c/128816/275988/4415?subId1=theme&subId2=banner&subId3=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192&u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192" class="button feather-button primary-button is-bold raised">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar is-light">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.html" class="navbar-item">
+                        <img src="assets/img/logo/nephos-white.svg" alt="">
+                        <span class="brand-name">Nephos</span>
+                    </a>
+                    <span class="navbar-burger burger" data-target="navbarMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id="navbarMenu" class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <a class="is-centered-responsive" href="#demos">Demo</a>
+                        </div>
+                        <div class="navbar-item">
+                            <a class="is-centered-responsive" href="https://docs.cssninja.io/nephos"
+                                target="_blank">Docs</a>
+                        </div>
+                        <div class="navbar-item">
+                            <a class="is-centered-responsive" href="https://support.cssninja.io" target="_blank">Support</a>
+                        </div>
+                        <div class="navbar-item">
+                            <a href="https://1.envato.market/c/128816/275988/4415?subId1=theme&subId2=banner&subId3=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192&u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192" class="button feather-button primary-button is-bold raised">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="hero-body">
+        <canvas id="canvas"></canvas>
+        <div class="container has-text-centered">
+            <div class="columns is-vcentered">
+                <div class="column is-6">
+                    <figure class="image">
+                        <img src="assets/img/ui/nephos.png" alt="">
+                    </figure>
+                </div>
+                <div class="column is-6">
+                    <h1 class="title is-1 is-light"><span class="typed-hero"></span></h1>
+                    <h2 class="subtitle is-5 is-light no-mb">
+                        Premium Ecommerce Frontend.
+                    </h2>
+                    <br>
+                    <p class="has-text-centered">
+                        <a href="#start" class="button feather-button secondary-button is-bold raised">Get Started</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-foot">
+        <div class="container">
+            <div class="tabs is-centered">
+                <ul>
+                    <li><a><img class="hero-logo" src="assets/img/brands/html5-white.svg"></a></li>
+                    <li><a><img class="hero-logo" src="assets/img/brands/bulma-white.svg"></a></li>
+                    <li><a><img class="hero-logo" src="assets/img/brands/sass-white.svg"></a></li>
+                    <li><a><img class="hero-logo" src="assets/img/brands/gulp-white.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="box cta">
+    <p class="has-text-centered">
+        <span class="tag is-secondary">New</span>
+        <span class="has-xs-side-padding is-base-font">Nephos now supports <b>Gulp 4</b> and <b>Node 12 LTS</b>. </span>
+    </p>
+</div>
+
+<section id="start" class="section is-medium">
+    <div class="container">
+
+        <div class="title-wrapper has-text-centered">
+            <div class="title is-3 is-spaced">
+                Jumpstart your Projects
+            </div>
+            <div class="subtitle is-5 is-muted">And build powerful apps</div>
+            <img class="filigrane" src="assets/img/logo/nephos-greyscale.svg">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns is-multiline has-text-centered">
+
+                <div class="column is-hidden-mobile"></div>
+
+                <div class="column">
+                    <div class="icon-box">
+                        <div class="icon-wrapper is-feature-reveal">
+                            <img src="assets/img/icons/demo/monitor.svg">
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Premium UI
+                            </div>
+                            <div class="box-text">
+                                Carefully handcrafted
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="icon-box">
+                        <div class="icon-wrapper is-feature-reveal">
+                            <img src="assets/img/icons/demo/phone.svg">
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Ultra Responsive
+                            </div>
+                            <div class="box-text">
+                                Optimized for all devices
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="icon-box">
+                        <div class="icon-wrapper is-feature-reveal">
+                            <img src="assets/img/icons/demo/clock.svg">
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Time Saving
+                            </div>
+                            <div class="box-text">
+                                Ready to build your app
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="icon-box">
+                        <div class="icon-wrapper is-feature-reveal">
+                            <img src="assets/img/icons/demo/chart.svg">
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Ecommerce Ready
+                            </div>
+                            <div class="box-text">
+                                All you need for your store
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-hidden-mobile"></div>
+            </div>
+
+            <div class="cta-wrapper has-text-centered">
+                <a href="https://1.envato.market/c/128816/275988/4415?subId1=theme&subId2=banner&subId3=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192&u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192" target="_blank" class="button feather-button secondary-button is-bold raised">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section is-medium is-grey">
+    <div class="container">
+        <div class="columns is-vcentered">
+            <div class="column is-4 is-offset-2">
+                <div class="feature-divider is-responsive-centered"></div>
+                <h2 class="title is-4 is-responsive-centered">
+                    Elegant Layout
+                </h2>
+                <p class="is-muted is-responsive-centered">
+                    Nephos has been designed with care. Each UI element has been thought separatly.
+                </p>
+            </div>
+            <div class="column is-6 has-text-centered is-centered-tablet-portrait">
+                <img class="is-featured" src="assets/img/ui/sidebar.png" alt="">
+            </div>
+        </div>
+
+        <div class="columns is-vcentered">
+            <div class="column is-6 is-offset-1 is-hidden-mobile has-text-centered">
+                <img class="is-featured" src="assets/img/ui/micro-interactions.png" alt="">
+            </div>
+            <div class="column is-4">
+                <div class="feature-divider is-responsive-centered"></div>
+                <h2 class="title is-4 is-responsive-centered">
+                    Micro Interactions
+                </h2>
+                <p class="is-muted is-responsive-centered">
+                    For a better user experience, Nephos is shipped with many built in micro interactions.
+                </p>
+            </div>
+            <div class="column is-6 is-offset-1 is-hidden-desktop is-hidden-tablet is-centered-tablet-portrait">
+                <img class="is-featured" src="assets/img/ui/micro-interactions.png" alt="">
+            </div>
+        </div>
+
+        <div class="columns is-vcentered">
+            <div class="column is-4 is-offset-2">
+                <div class="feature-divider is-responsive-centered"></div>
+                <h2 class="title is-4 is-responsive-centered">
+                    Easy Theming
+                </h2>
+                <p class="is-muted is-responsive-centered">
+                    6 Themes are available by default. You can also create your very own from scratch.
+                </p>
+            </div>
+            <div class="column is-6 is-centered-tablet-portrait has-text-centered">
+                <img class="is-featured" src="assets/img/ui/color-schemes.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="demos" class="section is-medium">
+    <div class="container">
+        <div class="title-wrapper has-text-centered">
+            <div class="title is-3 is-spaced">
+                Shop Demos
+            </div>
+            <div class="subtitle is-5 is-muted">A Complete Ecommerce kit</div>
+            <img class="filigrane" src="assets/img/logo/nephos-greyscale.svg" alt="">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns is-multiline has-text-centered">
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/nephos.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="home.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Slider Homepage</div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/nephos-alt.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="home-alt.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Image Homepage</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/categories.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="shop.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Shop Categories</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/auth.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="authentication.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Authentication</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/products-grid.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="products.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Products Grid</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/products-list.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="products-list.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Products List</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/single-product-carousel.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="product.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Product Details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/account.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="account.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Account</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/account-edit.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="account-edit.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Edit Account</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/account-placeholder.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="account-placeholder.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Account Empty</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/wishlist.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="wishlist.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Wishlist</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/wishlist-empty.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="wishlist-empty.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Empty Wishlist</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/cart.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="cart.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Cart</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/cart-empty.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="cart-empty.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Empty Cart</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/orders-grid.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="orders.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Orders Grid</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/orders-list.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="orders-list.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Orders List</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/order-details.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="order.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Orders Details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/orders-empty.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="orders-empty.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Orders Empty</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/invoice.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="invoice.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Invoice</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/checkout1.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="checkout-step1.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Checkout Step 1</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/checkout2.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="checkout-step2.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Checkout Step 2</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/checkout3.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="checkout-step3.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Checkout Step 3</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/checkout4.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="checkout-step4.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Checkout Step 4</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/checkout5.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="checkout-step5.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Checkout Step 5</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/error-404.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="error-404.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Error 404</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/error-500.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="error-500.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Error 500</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/search-results.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="search-results.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Search Results</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <img src="assets/img/ui/app/elements.png" alt="">
+
+                    <!-- Animated Link -->
+                    <div class="link-wrap">
+                        <div class="stroke-wrapper">
+                            <a class="animated-button" href="elements.html" target="_blank">
+                                <svg height="40" width="210" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape" height="40" width="210"></rect>
+                                </svg>
+                                <div class="text">Elements</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section is-medium is-grey is-relative">
+    <div class="container">
+
+        <div class="content-wrapper">
+            <div class="columns is-vcentered">
+                <div class="column is-5 is-offset-1 is-on-top">
+                    <div class="feature-divider is-responsive-centered"></div>
+                    <h2 class="title is-4 is-responsive-centered">
+                        Well Documented
+                    </h2>
+                    <p class="is-muted has-padding-bottom is-responsive-centered">We wrote an extensive documentation to
+                        get you started as fast as possible. We want you to have the best experience with our product.
+                        You diserve it.</p>
+                    <div class="is-responsive-centered is-title-reveal">
+                        <a href="https://docs.cssninja.io/nephos" target="_blank"
+                            class="button feather-button primary-button is-bold raised is-responsive-centered">Read the
+                            Docs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img class="is-ui is-hidden-mobile" src="assets/img/ui/collection.png">
+
+</section>
+
+<section class="section is-medium">
+    <div class="container">
+
+        <div class="title-wrapper has-text-centered">
+            <div class="title is-3 is-spaced">
+                Awesome Features
+            </div>
+            <div class="subtitle is-5 is-muted">To make you happy</div>
+            <img class="filigrane" src="assets/img/logo/nephos-greyscale.svg">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns has-text-centered spaced-boxes">
+
+                <div class="column is-hidden-mobile"></div>
+
+                <div class="column is-3">
+                    <div class="icon-box">
+                        <div class="icon-wrapper">
+                            <i data-feather="code"></i>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Clean Code
+                            </div>
+                            <div class="box-text">
+                                Enhanced maintainability
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="icon-box">
+                        <div class="icon-wrapper">
+                            <i data-feather="smartphone"></i>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Ultra Responsive
+                            </div>
+                            <div class="box-text">
+                                Ready for all devices
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="icon-box">
+                        <div class="icon-wrapper">
+                            <i data-feather="shopping-cart"></i>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Prebuilt pages
+                            </div>
+                            <div class="box-text">
+                                20+ prebuilt pages
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-hidden-mobile"></div>
+
+            </div>
+            <div class="columns has-text-centered spaced-boxes">
+
+                <div class="column is-hidden-mobile"></div>
+
+                <div class="column is-3">
+                    <div class="icon-box">
+                        <div class="icon-wrapper">
+                            <i data-feather="sidebar"></i>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Modern Design
+                            </div>
+                            <div class="box-text">
+                                That will make you stand out
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="icon-box">
+                        <div class="icon-wrapper">
+                            <i data-feather="feather"></i>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Feather Icons
+                            </div>
+                            <div class="box-text">
+                                Svg powered font icons
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="icon-box">
+                        <div class="icon-wrapper">
+                            <i data-feather="heart"></i>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Micro Interactions
+                            </div>
+                            <div class="box-text">
+                                For a better experience
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-hidden-mobile"></div>
+            </div>
+            <div class="columns has-text-centered spaced-boxes">
+
+                <div class="column is-hidden-mobile"></div>
+
+                <div class="column is-3">
+                    <div class="icon-box">
+                        <div class="icon-wrapper">
+                            <i data-feather="box"></i>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Future Updates
+                            </div>
+                            <div class="box-text">
+                                Get regular updates
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="icon-box">
+                        <div class="icon-wrapper">
+                            <i data-feather="book"></i>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Well Documented
+                            </div>
+                            <div class="box-text">
+                                We wrote a detailed documentation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="icon-box">
+                        <div class="icon-wrapper">
+                            <i data-feather="life-buoy"></i>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-title">
+                                Active Support
+                            </div>
+                            <div class="box-text">
+                                We help you with your issues
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-hidden-mobile"></div>
+            </div>
+
+            <div class="cta-wrapper has-text-centered is-title-reveal">
+                <a href="https://1.envato.market/c/128816/275988/4415?subId1=theme&subId2=banner&subId3=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192&u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192" target="_blank" class="button feather-button primary-button is-bold raised">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section is-medium is-grey">
+    <div class="container">
+
+        <div class="title-wrapper has-text-centered">
+            <div class="title is-3 is-spaced">
+                Made With
+            </div>
+            <div class="subtitle is-5 is-muted">Bulma, Sass and Gulp</div>
+            <img class="filigrane" src="assets/img/logo/nephos-greyscale.svg">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns has-text-centered">
+                <div class="column is-hidden-mobile"></div>
+
+                <div class="column is-3">
+                    <div class="ball levitate has-version">
+                        <img src="assets/img/brands/bulma.svg">
+                        <div class="v-indicator">0.9</div>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="ball levitate has-delay-1">
+                        <img src="assets/img/brands/sass.svg">
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="ball levitate has-delay-2">
+                        <img src="assets/img/brands/gulp.svg">
+                    </div>
+                </div>
+
+                <div class="column is-hidden-mobile"></div>
+            </div>
+
+            <div class="cta-wrapper has-text-centered is-title-reveal">
+                <a href="https://1.envato.market/c/128816/275988/4415?subId1=theme&subId2=banner&subId3=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192&u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnephos-modern-bulma-ecommerce-app-and-dashboard%2F21724192" target="_blank" class="button feather-button primary-button is-bold raised">Buy Nephos</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> footer}}

@@ -1,0 +1,637 @@
+/*! _product.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Product page styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Product left panel
+1. Product Right Panel
+2. Review Modal
+3. Carousel Modifier
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Product left panel
+========================================================================== */
+
+//Left image panel
+.product-panel {
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 100vh;
+    width: 40%;
+    background: $white;
+    box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.06);
+    z-index: 1;
+
+    //header
+    .panel-header {
+        line-height: 48px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 40px 0;
+        position: relative;
+        z-index: 15;
+
+        .likes {
+            margin: 0 30px;
+
+            span {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: $muted-grey;
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+                stroke: $title-grey;
+                position: relative;
+                top: 2px;
+
+                &.is-liked {
+                    stroke: $red !important;
+                    fill: $red !important;
+                }
+            }
+        }
+    }
+
+    //image
+    .product-image {
+        padding: 25% 0;
+        text-align: center;
+        position: relative;
+
+        img {
+            max-width: 250px;
+        }
+    }
+
+    //footer actions
+    .product-actions {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        //zoom buttons
+        .zoom-buttons {
+            margin: 0 30px;
+            max-height: 20px;
+
+            svg {
+                stroke: $muted-grey;
+
+                &:hover {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        //Actions
+        .right-actions {
+            margin: 0 30px;
+            max-height: 20px;
+
+            svg {
+                stroke: $muted-grey;
+
+                &:hover {
+                    stroke: $primary;
+                }
+            }
+
+            span {
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+                margin: 0 5px;
+
+                &.is-active svg {
+                    stroke: $primary;
+                }
+            }
+        }
+    }
+
+    //Product description
+    .detailed-description {
+        padding: 10px 40px 20px 40px;
+        max-height: 65vh;
+        overflow-y: auto;
+        margin-top: 20px;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        //Meta
+        .meta-block {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+
+            h3 {
+                font-family: 'Raleway', sans-serif;
+                font-weight: 600;
+                color: $dark-text;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+
+                &.spaced {
+                    padding-top: 10px;
+                }
+            }
+
+            p {
+                color: $muted-grey;
+                padding-top: 5px;
+                font-size: 0.9rem;
+
+                &.spaced {
+                    padding-top: 10px;
+                }
+            }
+
+            //Color dots
+            .colored-dots {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 10px;
+
+                .dot-wrapper {
+                    text-align: center;
+                    margin: 0 5px;
+
+                    .dot {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+
+                        &.is-blue {
+                            background: $primary;
+                        }
+
+                        &.is-white {
+                            background: $white;
+                            border: 1px solid $accent-grey;
+                        }
+
+                        &.is-dark {
+                            background: #393447;
+                        }
+
+                        &.is-cream {
+                            background: #d6d3c0;
+                        }
+
+                        &.is-red {
+                            background: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Product ratings sections
+    .product-ratings {
+        padding: 10px 40px 20px 40px;
+        max-height: 65vh;
+        overflow-y: auto;
+        margin-top: 20px;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        //Main rating
+        .main-rating {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        span {
+            font-weight: 400;
+            color: $muted-grey;
+            font-size: 0.9rem;
+            padding-top: 15px;
+
+            small {
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: $primary;
+            }
+        }
+
+        //Stars
+        .stars {
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+
+            i {
+                font-size: 1.2rem;
+                color: #FFD700;
+            }
+        }
+
+        //Add review button
+        .add-review {
+            cursor: pointer;
+
+            svg {
+                height: 16px;
+                width: 16px;
+                position: relative;
+                top: 4px;
+            }
+
+            &:hover {
+                color: $primary;
+
+                svg {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        //Customer ratings list
+        .customer-ratings {
+            //List item
+            .media {
+                margin-top: 30px;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .media-content {
+                p {
+                    font-size: 0.9rem;
+                    color: $muted-grey;
+
+                    span {
+                        color: $dark-text;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+
+                    .rating-content {
+                        font-size: 0.85rem;
+                        color: $muted-grey;
+                        font-weight: 400;
+                    }
+
+                    small {
+                        padding-left: 10px;
+
+                        i {
+                            color: #FFD700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+1. Product Right panel
+========================================================================== */
+
+//Right panel
+.product-info-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    min-height: 100vh;
+    width: 60%;
+    background: #f0f0f0;
+
+    .inner-panel {
+        height: 100%;
+
+        //header
+        .panel-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 40px 0;
+
+            //product category
+            .category-title {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                padding: 0 80px;
+
+                h2 {
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    padding: 0 20px;
+                    color: $dark-text;
+                }
+
+                img {
+                    height: 48px;
+                }
+
+                svg {
+                    height: 40px;
+                    width: 40px;
+                    fill: $muted-grey;
+                }
+            }
+        }
+
+        //body
+        .panel-body {
+            padding: 60px 80px;
+
+            //product meta
+            .product-name {
+                font-family: 'Raleway', sans-serif;
+                text-transform: uppercase;
+                font-size: 2.2rem;
+                font-weight: 500;
+                color: $dark-text;
+
+                span {
+                    color: $muted-grey;
+                    font-size: 40%;
+                }
+            }
+
+            //description
+            .product-description {
+                padding-top: 20px;
+                color: $muted-grey;
+            }
+
+            //Controls
+            .product-controls {
+                padding-top: 20px;
+                display: flex;
+                align-items: baseline;
+                justify-content: flex-start;
+
+                //price
+                .product-price {
+                    position: relative;
+
+                    .heading {
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 600;
+                        margin: 5px 0;
+                    }
+
+                    .value {
+                        span {
+                            &:first-child {
+                                font-size: 1.6rem;
+                                font-weight: 700;
+                                color: $primary;
+
+                                &:before {
+                                    content: '$';
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                                padding: 0 20px;
+                                color: $muted-grey;
+                                text-decoration: line-through;
+
+                                &:before {
+                                    content: '$';
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //Size control
+                .size-box-wrap {
+                    margin-left: auto;
+                    margin-right: 10px;
+
+                    .heading {
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 600;
+                        margin: 5px 0;
+                        text-align: left;
+                        padding-left: 8px;
+                    }
+                }
+
+                //quantity input
+                .product-quantity {
+
+                    .heading {
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 600;
+                        margin: 5px 0;
+                        text-align: left;
+                        padding-left: 8px;
+                    }
+
+                    .details-spinner {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        height: 36px;
+                        min-width: 90px;
+                        border: 1px solid $fade-grey;
+                        border-radius: 100px;
+
+                        //margin: 12px;
+                        background: $white;
+                        box-shadow: $light-box-shadow;
+
+                        .spinner-value {
+                            display: block;
+                            line-height: 2.2;
+                        }
+
+                        .spinner-button {
+                            height: 36px;
+                            width: 36px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            padding: 0;
+                            transition: all .3s;
+                            opacity: 1;
+
+                            &:hover {
+                                svg {
+                                    stroke: $primary;
+                                }
+                            }
+
+                            svg {
+                                height: 14px;
+                                width: 14px;
+                                stroke: $muted-grey;
+                                transition: stroke .3s;
+                            }
+                        }
+                    }
+
+                    .control {
+                        height: 48px;
+                        max-width: 80px;
+
+                        .input {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                //add to cart button
+                .add-to-cart {
+                    .heading {
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+
+                    button {
+                        line-height: .4;
+                        font-size: .75rem;
+                        font-weight: 600;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+
+        //panel footer
+        .panel-footer {
+            padding: 35px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: $white;
+            min-height: 250px;
+            z-index: 0;
+
+            .footer-inner {
+                //position: relative;
+                //top: 10px;
+                padding: 20px 0;
+
+                //title
+                .recommended {
+                    text-transform: uppercase;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    color: $muted-grey;
+                    position: absolute;
+                    top: 106px;
+                    left: -20px;
+                    transform: rotate(-90deg);
+                }
+
+                //recommended products
+                .featured-product {
+                    .image {
+                        img {
+                            max-width: 80px;
+                            margin: 5px  auto;
+                        }
+                    }
+
+                    a {
+                        color: $dark-text;
+                    }
+
+                    .product-name {
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        font-size: 0.9rem;
+                    }
+
+                    .product-description {
+                        font-size: 70%;
+                        color: $muted-grey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+3. Carousel Modifier
+========================================================================== */
+
+.is-carousel {
+    img {
+        max-height: 350px !important;
+    }
+
+    .slider {
+        margin: 0 auto;
+    }
+
+    .slick-slide img {
+        margin: 0 auto !important;
+    }
+
+    .slider, .slick-slide {
+        &:focus {
+            outline: none !important;
+        }
+    }
+}

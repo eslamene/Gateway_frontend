@@ -1,0 +1,1473 @@
+---
+layout: default
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader}}
+
+<!-- Mobile Navbar-->
+{{> mobile-navbar}}
+
+<!-- Main Sidebar-->
+{{> shop-sidebar}}
+
+<!-- FAB -->
+{{> flying-button}}
+
+<!-- Categories Right quickview -->
+{{> quickview-categories}}
+
+<!-- Shop quickview -->
+{{> quickview-main}}
+
+<!-- Cart quickview -->
+{{> quickview-cart}}
+
+<!-- Filters quickview -->
+{{> quickview-filters}}
+
+
+<!-- Main wrapper -->
+<div class="shop-wrapper">
+
+    {{> search-overlay}}
+
+    <!-- Main section -->
+    <div id="shop-list" class="section">
+        <!-- Container -->
+        <div class="container">
+
+            <!-- House products -->
+            <div class="columns category-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <!-- Title -->
+                    <div class="category-title is-product-category">
+                        <h2>HOUSE</h2>
+                        <div class="category-icon is-hidden-mobile">
+                            {{> house}}
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="listing-controls">
+                        <div class="layout-controls">
+                            <a href="products.html"><span><i data-feather="grid"></i></span></a>
+                            <a href="products-list.html"><span class="is-active"><i data-feather="list"></i></span></a>
+                        </div>
+                        <!-- Sort -->
+                        <div class="sort-box">
+                            <div class="sort-box-select">
+                                <select data-placeholder="Default order" class="chosen-select-no-single">
+                                    <option>Default Sort</option>
+                                    <option>Best Sellers</option>
+                                    <option>Highest Rated</option>
+                                    <option>Best Deals</option>
+                                    <option>Newest Products</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Controls -->
+
+                    <!-- Product List -->
+                    <div class="columns is-product-list is-multiline">
+                        <div class="column is-12">
+                            <ul>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="1" data-product-category="House">
+                                    <!-- Product image -->
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/red-seat.png" alt="">
+                                    </span>
+                                    <!-- Product meta -->
+                                    <span class="product-info">
+                                        <!-- Rating -->
+                                        <span class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="is-hidden-mobile">47 Ratings</small>
+                                        </span>
+                                        <!-- Meta -->
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Red seat</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            <span>45.00</span>
+                                        </span>
+                                    </span>
+
+                                    <!-- Abstract -->
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <!-- Actions -->
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="3" data-product-category="House">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/modern-table.png" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star is-empty"></i>
+                                            <small class="is-hidden-mobile">8 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">White Table</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            350.49
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="4" data-product-category="House">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/blue-seat.png" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="is-hidden-mobile">92 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Blue Seat</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            35,00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="5" data-product-category="House">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/modern-bed.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="is-hidden-mobile">179 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Modern Bed</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            <span>120.99</span>
+                                            <span class="sale-price">299.99</span>
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+
+                                    <div class="on-sale">
+                                        <i data-feather="dollar-sign" class="has-simple-popover" data-content="This product is on sale" data-placement="top"></i>
+                                    </div>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="6" data-product-category="House">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/dark-seat.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">28 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Dark Seat</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            <span>50.25</span>
+                                            <span class="sale-price">79.25</span>
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+
+                                    <div class="on-sale">
+                                        <i data-feather="dollar-sign" class="has-simple-popover" data-content="This product is on sale" data-placement="top"></i>
+                                    </div>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="7" data-product-category="House">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/house1.png" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">152 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">TV Furniture</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            430.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="8" data-product-category="House">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/house2.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">19 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Cabinet</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            240.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <!-- /Product list -->
+
+                    <div class="show-more"><a href="#">Show more products</a></div>
+
+                </div>
+            </div>
+            <!-- /House products -->
+
+            <!-- Office products -->
+            <div class="columns category-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <!-- Title -->
+                    <div class="category-title is-product-category">
+                        <h2>OFFICE</h2>
+                        <div class="category-icon is-hidden-mobile">
+                            {{> office}}
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="listing-controls">
+                        <div class="layout-controls">
+                            <a href="products.html"><span><i data-feather="grid"></i></span></a>
+                            <a href="products-list.html"><span class="is-active"><i data-feather="list"></i></span></a>
+                        </div>
+                        <!-- Sort -->
+                        <div class="sort-box">
+                            <div class="sort-box-select">
+                                <select data-placeholder="Default order" class="chosen-select-no-single">
+                                    <option>Default Sort</option>
+                                    <option>Best Sellers</option>
+                                    <option>Highest Rated</option>
+                                    <option>Best Deals</option>
+                                    <option>Newest Products</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Controls -->
+
+                    <!-- Product List -->
+                    <div class="columns is-product-list is-multiline">
+                        <div class="column is-12">
+                            <ul>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="9" data-product-category="Office">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/office3.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">362 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Imperator</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            <span>490.00</span>
+                                            <span class="sale-price">699.99</span>
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+
+                                    <div class="on-sale">
+                                        <i data-feather="dollar-sign" class="has-simple-popover" data-content="This product is on sale" data-placement="top"></i>
+                                    </div>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="10" data-product-category="Office">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/office1.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star is-empty"></i>
+                                            <i class="fa fa-star is-empty"></i>
+                                            <small class="is-hidden-mobile">9 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Roller</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            75.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="11" data-product-category="Office">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/office4.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">210 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Executive</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            125.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="12" data-product-category="Office">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/office5.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">43 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Cosy Chair</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            <span>88.49</span>
+                                            <span class="sale-price">119.99</span>
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+
+                                    <div class="on-sale">
+                                        <i data-feather="dollar-sign" class="has-simple-popover" data-content="This product is on sale" data-placement="top"></i>
+                                    </div>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="13" data-product-category="Office">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/office9.png" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">50 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Ambassador</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            480.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="14" data-product-category="Office">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/office6.png" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">151 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Conqueror</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            590.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="15" data-product-category="Office">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/office7.gif" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">49 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Gentleman</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            375.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Products list -->
+
+                    <div class="show-more"><a href="#">Show more products</a></div>
+
+                </div>
+            </div>
+            <!-- Office products -->
+
+            <!-- Kids products -->
+            <div class="columns category-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <!-- Title -->
+                    <div class="category-title is-product-category">
+                        <h2>FOR KIDS</h2>
+                        <div class="category-icon is-hidden-mobile">
+                            {{> kids}}
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="listing-controls">
+                        <div class="layout-controls">
+                            <a href="products.html"><span><i data-feather="grid"></i></span></a>
+                            <a href="products-list.html"><span class="is-active"><i data-feather="list"></i></span></a>
+                        </div>
+                        <!-- Sort -->
+                        <div class="sort-box">
+                            <div class="sort-box-select">
+                                <select data-placeholder="Default order" class="chosen-select-no-single">
+                                    <option>Default Sort</option>
+                                    <option>Best Sellers</option>
+                                    <option>Highest Rated</option>
+                                    <option>Best Deals</option>
+                                    <option>Newest Products</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Controls -->
+
+                    <!-- Product List -->
+                    <div class="columns is-product-list is-multiline">
+                        <div class="column is-12">
+                            <ul>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="16" data-product-category="For Kids">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kids1.jpg"  alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">22 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Tabouret</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            22.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="17" data-product-category="For Kids">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kids2.jpg"  alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">51 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Rabbit Lamp</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            14.49
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="18" data-product-category="For Kids">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kids3.png"  alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">89 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">White Bed</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            <span>375.00</span>
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="19" data-product-category="For Kids">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kids4.jpg"  alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">31 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Toy Boxes</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            45.99
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="20" data-product-category="For Kids">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kids5.jpg"  alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">138 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Baby Chest</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            <span>185.00</span>
+                                            <span class="sale-price">215.00</span>
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+
+                                    <div class="on-sale">
+                                        <i data-feather="dollar-sign" class="has-simple-popover" data-content="This product is on sale" data-placement="top"></i>
+                                    </div>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="21" data-product-category="For Kids">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kids7.jpg"  alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">50 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Small Desk</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            190.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="22" data-product-category="For Kids">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kids6.jpg"  alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">39 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Animals Set</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            23.49
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="23" data-product-category="For Kids">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kids8.jpg"  alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">77 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Wood Elephant</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            57.99
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Products List -->
+
+                    <div class="show-more"><a href="#">Show more products</a></div>
+
+                </div>
+            </div>
+            <!-- Kids products -->
+
+            <!-- Kitchen products -->
+            <div class="columns category-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <div class="category-title is-product-category">
+                        <!-- Title -->
+                        <h2>KITCHEN</h2>
+                        <div class="category-icon is-hidden-mobile">
+                            {{> kitchen}}
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="listing-controls">
+                        <div class="layout-controls">
+                            <a href="products.html"><span><i data-feather="grid"></i></span></a>
+                            <a href="products-list.html"><span class="is-active"><i data-feather="list"></i></span></a>
+                        </div>
+                        <!-- Sort -->
+                        <div class="sort-box">
+                            <div class="sort-box-select">
+                                <select data-placeholder="Default order" class="chosen-select-no-single">
+                                    <option>Default Sort</option>
+                                    <option>Best Sellers</option>
+                                    <option>Highest Rated</option>
+                                    <option>Best Deals</option>
+                                    <option>Newest Products</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Controls -->
+
+                    <!-- Product List -->
+                    <div class="columns is-product-list is-multiline">
+                        <div class="column is-12">
+                            <ul>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="24" data-product-category="Kitchen">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kitchen.png" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star is-empty"></i>
+                                            <small class="is-hidden-mobile">11 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Chromed Sink</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            142.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="25" data-product-category="Kitchen">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kitchen3.png" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">121 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Mini Kitchen</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            425.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="26" data-product-category="Kitchen">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kitchen2.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">69 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Auto Toaster</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            63.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="27" data-product-category="Kitchen">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kitchen4.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">312 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Modern Fridge</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            675.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="28" data-product-category="Kitchen">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/kitchen5.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">161 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Coffee Machine</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            178.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Products List -->
+
+                    <div class="show-more"><a href="#">Show more products</a></div>
+
+                </div>
+            </div>
+            <!-- /Kitchen products -->
+
+            <!-- Accessories products -->
+            <div class="columns category-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <!-- Title -->
+                    <div class="category-title is-product-category">
+                        <h2>ACCESSORIES</h2>
+                        <div class="category-icon is-hidden-mobile">
+                            {{> accessories}}
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="listing-controls">
+                        <div class="layout-controls">
+                            <a href="products.html"><span><i data-feather="grid"></i></span></a>
+                            <a href="products-list.html"><span class="is-active"><i data-feather="list"></i></span></a>
+                        </div>
+                        <!-- Sort -->
+                        <div class="sort-box">
+                            <div class="sort-box-select">
+                                <select data-placeholder="Default order" class="chosen-select-no-single">
+                                    <option>Default Sort</option>
+                                    <option>Best Sellers</option>
+                                    <option>Highest Rated</option>
+                                    <option>Best Deals</option>
+                                    <option>Newest Products</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Controls -->
+
+                    <!-- Product List -->
+                    <div class="columns is-product-list is-multiline">
+                        <div class="column is-12">
+                            <ul>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="29" data-product-category="Accessories">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/access1.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star is-empty"></i>
+                                            <small class="is-hidden-mobile">11 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Styled Lamp</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            75.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="30" data-product-category="Accessories">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/access2.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">29 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Golden Lamp</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            52.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="31" data-product-category="Accessories">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/access3.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">43 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Aquarium</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            235.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="32" data-product-category="Accessories">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/access4.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">95 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Modern Shelf</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            <span>510.00</span>
+                                            <span class="sale-price">629.00</span>
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+
+                                    <div class="on-sale">
+                                        <i data-feather="dollar-sign" class="has-simple-popover" data-content="This product is on sale" data-placement="top"></i>
+                                    </div>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="33" data-product-category="Accessories">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/access5.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star is-empty"></i>
+                                            <small class="is-hidden-mobile">15 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Ground Shelf</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            80.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="34" data-product-category="Accessories">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/access6.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star is-empty"></i>
+                                            <small class="is-hidden-mobile">23 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Modern Cabinet</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            265.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="35" data-product-category="Accessories">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/access8.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">18 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Ground Speakers</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            99.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                                <!-- Product -->
+                                <li class="flat-card product-container is-auto is-list-item" data-product-id="36" data-product-category="Accessories">
+                                    <span class="image">
+                                        <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/products/access7.jpg" alt="">
+                                    </span>
+                                    <span class="product-info">
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <small class="is-hidden-mobile">47 Ratings</small>
+                                        </span>
+                                        <a class="product-details-link" href="product.html"><span class="product-name">Modern Speakers</span></a>
+                                        <span class="product-description">Lorem ipsum sit dolor amet</span>
+                                        <span class="product-price">
+                                            99.00
+                                        </span>
+                                    </span>
+
+                                    <span class="product-abstract is-hidden-mobile">
+                                        This is a well designed and crafted product that will suit many needs, in terms of quality, craftmanship and aesthetics.
+                                        <span class="view-more">
+                                            <a class="product-details-link" href="product.html">View more <i data-feather="chevron-right"></i></a>
+                                        </span>
+                                    </span>
+
+                                    <span class="actions">
+                                        <span class="add"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Add to Cart" data-placement="top"></i></span>
+                                        <span class="like"><i data-feather="heart" class="has-simple-popover" data-content="Add to Wishlist" data-placement="top"></i></span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Products List -->
+
+                    <div class="show-more"><a href="#">Show more products</a></div>
+
+                </div>
+            </div>
+            <!-- /Accessories products -->
+
+        </div>
+        <!-- /Container -->
+    </div>
+    <!-- /Main section -->
+</div>
+<!-- /Main wrapper -->

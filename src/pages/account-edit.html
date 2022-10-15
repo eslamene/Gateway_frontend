@@ -1,0 +1,382 @@
+---
+layout: default
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader}}
+
+<!-- Mobile Navbar-->
+{{> mobile-navbar}}
+
+<!-- Main Sidebar-->
+{{> shop-sidebar}}
+
+<!-- FAB -->
+{{> flying-button}}
+
+<!-- Categories Right quickview -->
+{{> quickview-categories}}
+
+<!-- Shop quickview -->
+{{> quickview-main}}
+
+<!-- Cart quickview -->
+{{> quickview-cart}}
+
+<!-- Main wrapper -->
+<div class="shop-wrapper">
+
+    {{> search-overlay}}
+
+    <!-- Main section -->
+    <div id="edit-account-page" class="section">
+        <!-- Container -->
+        <div class="container">
+            <!-- Edit Account -->
+            <div class="columns account-header">
+                <div class="column main-column">
+                    <div class="account-title">
+                        <h2>EDIT ACCOUNT</h2>
+                        <img class="brand-filigrane" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                    </div>
+
+                    <!-- Account tabs -->
+                    <div class="tabs account-tabs">
+                        <ul>
+                            <li class="is-active"><a href="account.html">Account</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="orders.html">Orders</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="account-edit-main-placeholder" class="main-placeholder is-hidden">
+                        <div class="placeholder-content">
+                            <img src="assets/img/illustrations/profile.svg" alt="">
+                            <h3>Welcome, Guest</h3>
+                            <p>Guest users don't have accounts. Please login or register to view your account.</p>
+                            <div class="button-wrap">
+                                <a href="./authentication.html" class="button big-button primary-button rounded raised">Log In</a>
+                            </div>
+                            <a>Don't have an account?</a>
+                        </div>
+                    </div>
+
+                    <!-- Edit Account Layout -->
+                    <div id="account-edit-main" class="columns is-account-grid is-multiline">
+                        <!--Loader-->
+                        <div class="account-loader is-active">
+                            <div class="loader is-pulled-lg is-loading"></div>
+                        </div>
+                        <div class="column is-4">
+                            <!-- Upload Avatar -->
+                            <div class="flat-card upload-card is-auto">
+                                <div class="card-body">
+                                    <!-- Avatar form -->
+                                    <div id="avatar-upload" class="avatar-wrapper has-simple-popover" data-content="Change profile picture" data-placement="top">
+                                        <img class="profile-pic" src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/elie.jpg" alt="">
+                                        <div class="upload-button modal-trigger" data-modal="upload-crop-modal">
+                                            <i class="upload-icon" data-feather="plus" aria-hidden="true"></i>
+                                        </div>
+                                        <!--input class="file-upload" type="file" accept="image/*"/-->
+                                    </div>
+                                    <!-- /Avatar form -->
+
+                                    <!-- User -->
+                                    <div class="username has-text-centered">
+                                        <span id="full-name">Elie Daniels</span>
+                                        <span id="full-email">eliedaniels@gmail.com</span>
+                                    </div>
+
+                                    <div class="has-text-centered pop-button">
+                                        <button id="save-account-button" class="button feather-button primary-button is-rounded raised opaque">
+                                            Save Changes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Upload Avatar -->
+                        </div>
+                        <div class="column is-8">
+                            <!-- Edit contact Info -->
+                            <div class="flat-card profile-info-card is-auto">
+                                <!-- Title -->
+                                <div class="card-title">
+                                    <h3>Contact info</h3>
+                                    <!-- Save button -->
+                                    <div class="confirm-button is-vhidden">
+                                        <a href="javascript:void(0);" role="button" class="has-simple-popover" data-content="Save Contact info" data-placement="top"><i class="feather-icons" data-feather="check"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="columns">
+                                        <div class="column is-6">
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>First Name</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="edit-first-name" type="text" class="input is-default fake-validation" value="Elie">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Email</span>
+                                                    <span class="error">Enter a valid email</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="edit-email" type="email" class="input is-default fake-email-validation" value="eliedaniels@gmail.com">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="column is-6">
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Last Name</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="edit-last-name" type="text" class="input is-default fake-validation" value="Daniels">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="field info-block has-flex-label">
+                                                <label class="label-text">
+                                                    <span>Phone</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="edit-phone-number" type="text" class="input is-default" value="+1 555 623 568">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Edit contact Info -->
+
+                            <!-- Edit Billing Address -->
+                            <div class="flat-card profile-info-card is-auto has-overflow is-billing">
+                                <!-- Title -->
+                                <div class="card-title">
+                                    <h3>Billing Address</h3>
+
+                                    <div class="confirm-button is-vhidden">
+                                        <a href="javascript:void(0);" role="button" class="has-simple-popover" data-content="Save Addresses" data-placement="top"><i class="feather-icons" data-feather="check"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="columns">
+                                        <div class="column is-6">
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Number</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="billing-edit-address1" type="text" class="input is-default fake-validation" value="23, Block C2">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>City</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="billing-edit-city" type="text" class="input is-default fake-validation" value="Los Angeles">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>State</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="billing-edit-state" type="text" class="input is-default fake-validation" value="CA">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="column is-6">
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Street</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="billing-edit-address2" type="text" class="input is-default fake-validation" value="Church Street">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Postal Code</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="billing-edit-postal-code" type="text" class="input is-default fake-validation" value="10065">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Select -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Country</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control has-rounded-autocpl">
+                                                    <input id="billing-edit-country" type="text" class="input country-autocpl is-default fake-validation" value="United States">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Edit Billing Address -->
+
+                            <!-- Edit Shipping Address -->
+                            <div class="flat-card profile-info-card is-auto has-overflow is-shipping">
+                                <div class="card-title">
+                                    <h3>Shipping Address</h3>
+
+                                    <div class="switch-wrapper has-simple-popover" data-content="Enable if you need a different shipping address" data-placement="top">
+                                        <label class="form-switch">
+                                            <input id="shipping-switch" type="checkbox" class="is-switch">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="card-body is-disabled">
+                                    <div class="columns">
+                                        <div class="column is-6">
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Number</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="shipping-edit-address1" type="text" class="input is-default fake-validation" value="">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>City</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="shipping-edit-city" type="text" class="input is-default fake-validation" value="">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>State</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="shipping-edit-state" type="text" class="input is-default fake-validation" value="">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="column is-6">
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Street</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="shipping-edit-address2" type="text" class="input is-default fake-validation" value="">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Postal Code</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input id="shipping-edit-postal-code" type="text" class="input is-default fake-validation" value="">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Form group -->
+                                            <div class="field info-block has-flex-label has-validation">
+                                                <label class="label-text">
+                                                    <span>Country</span>
+                                                    <span class="error">Minimum 2 characters</span>
+                                                </label>
+                                                <div class="control has-rounded-autocpl">
+                                                    <input id="shipping-edit-country" type="text" class="input country-autocpl is-default fake-validation" value="">
+                                                    <div class="error-icon">
+                                                        <i data-feather="x"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Edit Shipping Address -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Edit Account -->
+        </div>
+    </div>
+    <!-- /Container -->
+</div>
+<!-- /Main wrapper -->
+
+{{> upload-crop-modal}}

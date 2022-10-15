@@ -1,0 +1,181 @@
+/*! _utils.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Utils and Miscellaneous styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+1. Toasts
+2. Messages
+3. Popovers
+=============================================================================
+***/
+
+/* ==========================================================================
+1. Toasts
+========================================================================== */
+
+@media (min-width: 768px) {
+    .iziToast {
+        .iziToast-body {
+            //max-width: 80%;
+            max-width: 250px;
+
+            .iziToast-icon {
+                height: 24px;
+                width: 24px;
+                margin-right: 4px;
+                font-size: 1rem;
+            }
+
+            .iziToast-texts {
+                p, strong {
+                    display: block !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .iziToast-wrapper {
+        align-items: center;
+    }
+
+    .iziToast {
+        .iziToast-body {
+            .iziToast-icon {
+                height: 24px;
+                width: 24px;
+                margin-right: 4px;
+                font-size: 1rem;
+            }
+
+            .iziToast-texts {
+                p, strong {
+                    display: block !important;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+2. Messages
+========================================================================== */
+
+.message {
+    &.has-close-icon {
+        .message-body {
+            position: relative;
+
+            .close-icon {
+                position: absolute;
+                top: 3px;
+                right: 4px;
+                height: 20px;
+                width: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+3. Popovers
+========================================================================== */
+
+.webui-popover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 10px 4px !important;
+    background: $sidebar !important;
+    color: $white !important;
+    border: none !important;
+    margin-top: -20px !important;
+
+    &.top > .webui-arrow {
+        border-top-color: transparent !important;
+    }
+
+    //Arrow
+    .webui-arrow {
+        border-top-color: transparent !important;
+
+        &:after {
+            border-top-color: $sidebar !important;
+        }
+    }
+
+    //Title
+    .webui-popover-title {
+        background-color: $sidebar !important;
+        border-bottom: none !important;
+        font-weight: 500;
+    }
+
+    //content
+    .webui-popover-content {
+        font-size: .75rem !important;
+
+        .popover-flex-block {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 5px 0;
+
+            .staff-avatar {
+                height: 38px;
+                width: 38px;
+                border-radius: 50%;
+            }
+
+            //Block
+            .content-block {
+                margin-left: 10px;
+
+                label, span {
+                    display: block;
+                }
+
+                label {
+                    color: lighten($sidebar, 35%);
+                    text-transform: uppercase;
+                    font-size: 70%;
+                }
+            }
+
+            .fa.fa-star, .fa.fa-star-half {
+                color: #FFD700;
+            }
+
+            .icon-block {
+                height: 38px;
+                width: 38px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    height: 18px;
+                    width: 18px;
+                    stroke: $white;
+                    stroke-width: 1.3px;
+
+                    &.is-medium {
+                        height: 26px;
+                        width: 26px;
+                    }
+                }
+            }
+        }
+    }
+}

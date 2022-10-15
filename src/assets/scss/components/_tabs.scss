@@ -1,0 +1,50 @@
+/*! _tabs.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+UI Tabs
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+1. base styles
+=============================================================================
+***/
+
+/* ==========================================================================
+1. base styles
+========================================================================== */
+
+.tabs-wrapper {
+    .tabs {
+        overflow: hidden;
+    }
+
+    //faded tabs
+    &.animated-tabs {
+        .navtab-content {
+            animation-name: fadeInLeft;
+            animation-duration: 0.5s;
+        }
+    }
+
+    //translated tabs
+    &.translated-tabs {
+        .navtab-content {
+            animation-name: translateLeft;
+            animation-duration: 0.5s;
+        }
+    }
+
+    //navtab content
+    .navtab-content {
+        display: none;
+        padding: 15px;
+        min-height: 190px;
+    }
+
+    //active state
+    .navtab-content.is-active {
+        display: block;
+    }
+}

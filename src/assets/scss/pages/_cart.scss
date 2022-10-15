@@ -1,0 +1,311 @@
+/*! _cart.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Cart page styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+1. Wrapper
+1. Cart Card
+2. Empty Cart Card
+=============================================================================
+***/
+
+/* ==========================================================================
+1. Wrapper
+========================================================================== */
+
+.cart-page-wrap {
+    position: relative;
+}
+
+/* ==========================================================================
+1. Cart Card
+========================================================================== */
+
+.cart-card {
+    padding: 20px;
+    margin-bottom: 16px;
+
+    //Cart content
+    .cart-content {
+        //Cart item
+        li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            img {
+                display: block;
+                height: 80px;
+            }
+
+            span {
+                display: block;
+            }
+
+            //Product meta
+            .product-info {
+                padding: 0 30px;
+                width: 220px;
+
+                span {
+                    &:first-child {
+                        color: $dark-text;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 600;
+                        font-size: .9rem;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 80%;
+                        text-transform: uppercase;
+                        color: $muted-grey-bold;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            //Product price
+            .product-price {
+                span {
+                    //margin-left: 30px;
+
+                    &:first-child {
+                        font-weight: 600;
+                        font-size: .75rem;
+                        text-transform: uppercase;
+                        color: $dark-text;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                        line-height: 1;
+                        color: $dark-text;
+                        width: 100px;
+
+                        &:before {
+                            content: '$';
+                            font-size: 90%;
+                        }
+                    }
+                }
+            }
+
+            //Quantity
+            .main-cart-spinner {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                height: 36px;
+                min-width: 90px;
+                border: 1px solid $fade-grey;
+                border-radius: 100px;
+                margin: 12px;
+                box-shadow: $light-box-shadow;
+
+                .spinner-value {
+                    display: block;
+                    line-height: 2.2;
+                }
+
+                .spinner-button {
+                    height: 36px;
+                    width: 36px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    padding: 0;
+                    transition: all .3s;
+                    opacity: 1;
+
+                    &:hover {
+                        svg {
+                            stroke: $primary;
+                        }
+                    }
+
+                    svg {
+                        height: 14px;
+                        width: 14px;
+                        stroke: $muted-grey;
+                        transition: stroke .3s;
+                    }
+                }
+            }
+
+            //Actions
+            .action {
+                margin-left: auto;
+
+                .action-link {
+                    position: relative;
+                    height: 40px;
+                    width: 40px;
+                    max-height: 40px;
+                    margin: 0 2px;
+                    display: inline-block;
+
+                    svg {
+                        transition: all .3s;
+                        transform: rotate(0);
+                        stroke-width: 1.2px;
+                    }
+
+                    a {
+                        color: grey;
+                        height: 40px;
+                        width: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1.6px dashed transparent;
+                        border-radius: 50%;
+                        max-height: 40px;
+                        transition: all .3s;
+
+                        span {
+                            font-size: 90% !important;
+                            padding-left: 5px;
+                        }
+
+                        svg {
+                            height: 18px;
+                            width: 18px;
+                            transition: all .3s;
+                        }
+
+                        &:hover {
+                            border: 1.6px solid $primary;
+
+                            svg {
+                                stroke: $primary;
+                            }
+                        }
+                    }
+
+                    &.is-remove:hover {
+                        a {
+                            border: 1.8px solid $primary;
+                        }
+
+                        svg {
+                            stroke: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cart-order-summary {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    padding: 30px;
+
+    .summary-header {
+        display: flex;
+        align-items: center;
+
+        var {
+            font-weight: bold;
+            color: $dark-text;
+        }
+
+        svg {
+            height: 18px;
+            width: 18px;
+            stroke: $muted-grey;
+            margin-right: 10px;
+        }
+    }
+
+    .cart-summary-list {
+        padding: 16px 8px;
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.is-bold {
+                span {
+                    font-size: 1.1rem;
+                    color: $dark-text;
+                    font-weight: 600;
+                }
+            }
+
+            span {
+                display: block;
+                color: $muted-grey;
+
+                &.amount {
+                    &:before {
+                        content: '$';
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+2. Empty Cart Card
+========================================================================== */
+
+.empty-cart-card {
+    padding: 40px;
+    border-radius: 6px;
+
+    .empty-cart {
+        h3, img {
+            display: block;
+        }
+
+        h3 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            padding-bottom: 40px;
+            color: $muted-grey;
+        }
+
+        img {
+            max-height: 90px;
+            max-width: 90px;
+            margin: 0 auto;
+        }
+
+        a {
+            margin-top: 20px;
+            color: $primary;
+            border: 1.4px solid $primary;
+            transition: all .4s;
+
+            &:hover {
+                //opacity: 0.4;
+                color: rgba(0, 35, 255, 0.4);
+                border-color: rgba(0, 35, 255, 0.4);
+            }
+        }
+
+        small {
+            display: block;
+            color: $muted-grey;
+            font-size: 80%;
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,0 +1,240 @@
+/*! _auth.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Login / Register page styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Authentication header
+1. Authentication card
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Authentication header
+========================================================================== */
+
+.auth-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 400 !important;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-weight: 500;
+        color: $primary;
+    }
+
+    &.is-centered {
+        justify-content: center;
+    }
+
+    .brand-filigrane {
+        position: absolute;
+        top: -15px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 68px;
+        opacity: 0.4;
+    }
+}
+
+.auth-toggler {
+    position: relative;
+    width: 68px;
+    margin: 60px auto 30px auto;
+
+    > input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+
+        &:checked {
+            + .toggler-track {
+                .hexagon-wrap {
+                    margin-left: 38px;
+                    transform: rotate(360deg);
+
+                    .hexagon {
+                        background-color: $primary;
+
+                        &:before {
+                            border-bottom-color: $primary;
+                        }
+
+                        &:after {
+                            border-top-color: $primary;
+                        }
+
+                        svg {
+                            &.register-icon {
+                                display: block;
+                            }
+
+                            &.login-icon {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .toggler-track {
+        position: relative;
+        width: 100%;
+        height: 20px;
+        background: darken($fade-grey, 5%);
+        border-radius: 100px;
+
+        .hexagon-wrap {
+            position: absolute;
+            top: -12px;
+            left: -4px;
+            transition: all .3s;
+
+            .hexagon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 38px;
+                height: 21.94px;
+                background-color: $white;
+                margin: 10.97px 0;
+
+                svg {
+                    height: 18px;
+                    width: 18px;
+                    stroke-width: 1.6px;
+
+                    &.register-icon {
+                        display: none;
+                        stroke: $white;
+                    }
+
+                    &.login-icon {
+                        display: block;
+                        stroke: $dark-text;
+                    }
+                }
+            }
+
+            .hexagon:before,
+            .hexagon:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                border-left: 19px solid transparent;
+                border-right: 19px solid transparent;
+            }
+
+            .hexagon:before {
+                bottom: 100%;
+                border-bottom: 10.97px solid $white;
+            }
+
+            .hexagon:after {
+                top: 100%;
+                width: 0;
+                border-top: 10.97px solid $white;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+1. Authentication card
+========================================================================== */
+
+.main-auth-wrapper {
+    .login-form-wrapper, .registration-form-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeInLeft .5s;
+
+        .login-form, .reset-form, .registration-form {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            animation: fadeInLeft .5s;
+
+            .form-description {
+                font-family: 'Montserrat', sans-serif;
+                font-size: .9rem;
+                color: $muted-grey;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .field {
+                label {
+                    font-family: 'Montserrat', sans-serif;
+                    text-transform: uppercase;
+                    font-size: .85rem;
+                    font-weight: 500;
+                }
+
+                .control {
+                    .input {
+                        height: 44px;
+                        box-shadow: none;
+
+                        &:focus {
+                            border-color: lighten($dark-text, 25%);
+                        }
+                    }
+                }
+            }
+
+            .flex-field {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 10px;
+            }
+
+            .button-wrap {
+                margin-top: 20px;
+
+                .button {
+                    height: 42px;
+                    font-weight: 600;
+                    font-size: .85rem;
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+
+            .forgot-link, .back-link {
+                margin: 20px 0;
+
+                a {
+                    color: $muted-grey;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,260 @@
+---
+layout: default
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader}}
+
+<!-- Mobile Navbar-->
+{{> mobile-navbar}}
+
+<!-- Main Sidebar-->
+{{> shop-sidebar}}
+
+<!-- FAB -->
+{{> flying-button}}
+
+<!-- Categories Right quickview -->
+{{> quickview-categories}}
+
+<!-- Shop quickview -->
+{{> quickview-main}}
+
+<!-- Cart quickview -->
+{{> quickview-cart}}
+
+<!-- Main wrapper -->
+<div class="shop-wrapper">
+
+    {{> search-overlay}}
+
+    <!-- Main section -->
+    <div id="order-details" class="section">
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Orders Grid -->
+            <div class="columns account-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <div class="account-title">
+                        <a href="orders-list.html" class="title-back">
+                            <i data-feather="chevron-left"></i>
+                        </a>
+                        <h2>ORDER DETAILS</h2>
+                        <div class="ml-auto">
+                            <div class="order-top-actions">
+                                <a><i data-feather="phone"></i> Assistance</a>
+                                <a><i data-feather="printer"></i> Print Order</a>
+                            </div>
+                        </div>
+                        <img class="brand-filigrane" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                    </div>
+                    <!--Header-->
+                    <div class="order-details-wrap">
+                        <div class="order-details-header">
+                            <div class="left">
+                                <span id="order-details-id">ORDER <var>48684</var></span>
+                                <span id="order-details-date">Issued on <var>Jul 23 2019</var></span>
+                            </div>
+                            <div class="right">
+                                <img id="order-details-avatar" src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/janet.jpg" alt="">
+                                <div class="inner-meta">
+                                    <span>Handled by</span>
+                                    <span id="order-details-contact">Janet Smith</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-stats">
+                            <div class="columns">
+                                <div class="column is-4">
+                                    <div id="payment-tile" class="order-stat">
+                                        <h3>Payment</h3>
+                                        <div class="order-stat-inner">
+                                            <div class="icon-container">
+                                                <img src="assets/img/icons/line/payment.svg" alt="">
+                                                <div class="indicator">
+                                                    <i class="check" data-feather="check"></i>
+                                                    <i class="error" data-feather="x"></i>
+                                                    <i class="warning" data-feather="x"></i>
+                                                </div>
+                                            </div>
+                                            <div class="meta">
+                                                <span>Payment</span>
+                                                <span>Paid</span>
+                                                <span>Credit Card</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-4">
+                                    <div id="shipping-tile" class="order-stat">
+                                        <h3>Shipping</h3>
+                                        <div class="order-stat-inner">
+                                            <div class="icon-container">
+                                                <img src="assets/img/icons/line/shipping.svg" alt="">
+                                                <div class="indicator">
+                                                    <i class="check" data-feather="check"></i>
+                                                    <i class="error" data-feather="x"></i>
+                                                    <i class="warning" data-feather="x"></i>
+                                                </div>
+                                            </div>
+                                            <div class="meta">
+                                                <span>Shipping</span>
+                                                <span>UPS</span>
+                                                <span>Tracking number: <a>1223546</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-4">
+                                    <div id="status-tile" class="order-stat">
+                                        <h3>Status</h3>
+                                        <div class="order-stat-inner">
+                                            <div class="icon-container">
+                                                <img src="assets/img/icons/line/status.svg" alt="">
+                                                <div class="indicator">
+                                                    <i class="check" data-feather="check"></i>
+                                                    <i class="error" data-feather="x"></i>
+                                                    <i class="warning" data-feather="x"></i>
+                                                </div>
+                                            </div>
+                                            <div class="meta">
+                                                <span>Status</span>
+                                                <span>Complete</span>
+                                                <span><a>View invoice</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-body">
+                            <div class="columns">
+                                <div class="column is-8">
+
+                                    <div class="left-side-header">
+                                        <h3>Products</h3>
+                                    </div>
+
+                                    <div class="flex-table">
+                                        <!--Table header-->
+                                        <div class="flex-table-header">
+                                            <span class="product"><span>Product</span></span>
+                                            <span class="quantity">Quantity</span>
+                                            <span class="price">Price</span>
+                                            <span class="discount">Discount</span>
+                                            <span class="total">Total</span>
+                                        </div>
+                                        <!--Table item-->
+                                        <div class="flex-table-item" data-product-id="107">
+                                            <div class="product">
+                                                <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kids2.jpg" alt="">
+                                                <span class="product-name">Rabbit Lamp</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="price">
+                                                <span class="has-price">14.49</span>
+                                            </div>
+                                            <div class="discount">
+                                                <span class="has-price">0</span>
+                                            </div>
+                                            <div class="total">
+                                                <span class="has-price">14.49</span>
+                                            </div>
+                                        </div>
+                                        <!--Table item-->
+                                        <div class="flex-table-item" data-product-id="107">
+                                            <div class="product">
+                                                <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/cosy-red-seat.png" alt="">
+                                                <span class="product-name">Red Seat</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="price">
+                                                <span class="has-price">45.00</span>
+                                            </div>
+                                            <div class="discount">
+                                                <span class="has-price">0</span>
+                                            </div>
+                                            <div class="total">
+                                                <span class="has-price">45.00</span>
+                                            </div>
+                                        </div>
+                                        <!--Table item-->
+                                        <div class="flex-table-item" data-product-id="107">
+                                            <div class="product">
+                                                <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/blue-seat.png" alt="">
+                                                <span class="product-name">Blue Seat</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="price">
+                                                <span class="has-price">35.00</span>
+                                            </div>
+                                            <div class="discount">
+                                                <span class="has-price">0</span>
+                                            </div>
+                                            <div class="total">
+                                                <span class="has-price">70.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="payment-info">
+                                        <h3 class="info-title">Payment Information</h3>
+                                        <div class="payment-block">
+                                            <span>Order subtotal</span>
+                                            <span id="order-subtotal-value" class="has-price">18.00</span>
+                                        </div>
+                                        <div class="payment-block">
+                                            <span>Order shipping</span>
+                                            <span id="order-shipping-value" class="has-price">22.83</span>
+                                        </div>
+                                        <div class="payment-block">
+                                            <span>Order tax</span>
+                                            <span id="order-tax-value" class="has-price">0.00</span>
+                                        </div>
+                                        <div class="payment-block">
+                                            <span class="is-bold">Order total</span>
+                                            <span id="order-grandtotal-value" class="has-price is-bold">40.83</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column is-4">
+                                    <!--Shipping Address-->
+                                    <div class="address-widget is-narrow">
+                                        <h3 class="widget-title">Shipping Address</h3>
+                                        <p class="address">
+                                            <var id="shipping-address1">3833 Mcgowen St.</var> <var id="shipping-address2">Palatanqua Park</var>
+                                            <br><var id="shipping-city">Long Beach</var>, <var id="shipping-state">CA</var> <var
+                                                id="shipping-postalCode">90808-1702</var>
+                                            <br><var id="shipping-country">United States</var>
+                                        </p>
+                                    </div>
+                                    <!--Billing Address-->
+                                    <div class="address-widget">
+                                        <h3 class="widget-title">Billing Address</h3>
+                                        <p class="address">
+                                            <var id="billing-address1">3833 Mcgowen St.</var> <var id="billing-address2">Palatanqua Park</var>
+                                            <br><var id="billing-city">Long Beach</var>, <var id="billing-state">CA</var> <var
+                                                id="billing-postalCode">90808-1702</var>
+                                            <br><var id="billing-country">United States</var>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

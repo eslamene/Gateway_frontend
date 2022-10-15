@@ -1,0 +1,61 @@
+/*! core.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Nephos core
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. CSS Imports
+=============================================================================
+***/
+
+/* ==========================================================================
+0. CSS Imports
+========================================================================== */
+
+@import "base/theme-slate";
+@import "base/base";
+@import "base/colors";
+@import "base/fonts";
+
+//Bulma source import
+@import "../sass/bulma.sass";
+
+@import "base/helpers";
+@import "base/utils";
+@import "abstracts/animations";
+@import "layout/layout";
+@import "layout/navbar";
+@import "layout/sidebar";
+@import "layout/filters";
+@import "components/pageloader";
+@import "components/buttons";
+@import "components/modals";
+@import "components/quickview";
+@import "components/cards";
+@import "components/messages";
+@import "components/tabs";
+@import "components/switch";
+@import "components/alert";
+@import "components/checkboxes";
+@import "components/forms";
+@import "pages/categories";
+@import "pages/account";
+@import "pages/cart";
+@import "pages/orders";
+@import "pages/product";
+@import "pages/checkout";
+@import "pages/auth";
+@import "pages/search";
+@import "pages/invoice";
+@import "pages/elements";
+@import "layout/responsive";
+
+$slick-font-path: "/assets/fonts/";
+$slick-loader-path: "/assets/fonts/";
+
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
+

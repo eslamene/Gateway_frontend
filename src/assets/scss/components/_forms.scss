@@ -1,0 +1,512 @@
+/*! _forms.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Form controls styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Textareas
+1. Form Controls
+2. Inputs
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Textareas
+========================================================================== */
+
+textarea.textarea {
+    color: $muted-grey;
+    box-shadow: none;
+    overflow: hidden;
+    transition: all 0.8s;
+
+    //focus colors
+    &:focus {
+        border: 1px solid $fade-grey;
+        box-shadow: none !important;
+    }
+
+    &.is-primary-focus:focus {
+        border-color: $primary;
+
+        ~ span.icon i {
+            color: $primary;
+        }
+    }
+
+    &.is-secondary-focus:focus {
+        border-color: $secondary;
+
+        ~ span.icon i {
+            color: $secondary;
+        }
+    }
+
+    &.is-accent-focus:focus {
+        border-color: $accent;
+
+        ~ span.icon i {
+            color: $accent;
+        }
+    }
+
+    &.is-grey-focus:focus {
+        border-color: $title-grey;
+
+        ~ span.icon i {
+            color: $title-grey;
+        }
+    }
+
+    &.is-default-focus:focus {
+        border-color: $muted-grey;
+
+        ~ span.icon i {
+            color: $muted-grey;
+        }
+    }
+
+    //growing textarea
+    &.is-grow {
+        min-height: 40px !important;
+        height: 40px;
+        resize: none;
+        transition: all 0.5s;
+
+        &:focus {
+            height: 130px !important;
+            border-color: $fade-grey;
+        }
+    }
+
+    //embeded button inside textarea
+    &.is-button {
+        min-height: 60px !important;
+        height: 60px !important;
+        resize: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: none !important;
+        transition: all 0.6s;
+
+        &:hover {
+            border-color: $fade-grey;
+        }
+
+        &:focus {
+            height: 130px !important;
+            padding-bottom: 40px !important;
+            border-color: $fade-grey;
+        }
+
+        + .textarea-button {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            border: 1px solid $fade-grey;
+            border-top: none !important;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            background: $light-grey;
+
+            button {
+                margin: 10px 7px 7px 7px;
+                font-size: 0.85rem;
+                padding: 4px 10px 8px 10px;
+                width: 92px;
+
+                //border-radius: 50px;
+           
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+1. Form Controls
+========================================================================== */
+
+.field {
+    &.has-flex-label {
+        > label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                display: block;
+
+                &.error {
+                    text-transform: initial;
+                    font-size: .75rem;
+                    color: $red;
+                    display: none;
+                }
+            }
+        }
+
+        &.has-validation {
+            &.has-error {
+                > label .error {
+                    display: block;
+                }
+
+                .control {
+                    .input {
+                        border-color: $red;
+                    }
+
+                    .error-icon {
+                        display: flex;
+                    }
+                }
+            }
+
+            .control {
+                position: relative;
+
+                .input {
+                    padding-right: 36px;
+                }
+
+                &.is-bigger {
+                    .input {
+                        padding-right: 44px;
+                    }
+
+                    .error-icon {
+                        height: 44px;
+                        width: 44px;
+                    }
+                }
+
+                .error-icon {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 36px;
+                    width: 36px;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg {
+                        height: 18px;
+                        width: 18px;
+                        stroke: $red;
+                        transition: stroke .3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.control {
+    &.control-medium {
+        padding: 20px;
+    }
+
+    &.is-input-wrapper {
+        margin: 10px 0;
+        background: #f7f7f7;
+    }
+
+    &.has-icon {
+        position: relative;
+
+        .input {
+            padding-left: 40px;
+
+            &:focus + .form-icon svg {
+                stroke: $primary;
+            }
+        }
+
+        .form-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                height: 18px;
+                width: 18px;
+                stroke: $placeholder;
+                transition: stroke .3s;
+            }
+        }
+    }
+
+    &.is-bigger {
+        .input {
+            height: 44px;
+            padding-left: 44px;
+        }
+
+        &.has-icon {
+            .form-icon {
+                height: 44px;
+                width: 44px;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+2. Inputs
+========================================================================== */
+
+.input {
+    transition: all .3s;
+
+    &.is-minimal {
+        box-shadow: none !important;
+
+        &:focus {
+            box-shadow: none !important;
+            border: 1px solid $fade-grey;
+        }
+    }
+
+    &.is-default {
+        box-shadow: none;
+        color: $muted-grey-bold;
+
+        &:focus {
+            border: 1px solid $fade-grey;
+        }
+    }
+}
+
+/* ==========================================================================
+Special toggle
+========================================================================== */
+
+//Wrapper
+.special-toggle {
+    width: 65px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transform: scale(0.9);
+
+    //Checkbox
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+        //Checbox states
+        &:checked ~ .toggler {
+            box-shadow: $light-box-shadow;
+
+            .active, .inactive {
+                transform: translateX(100%) rotate(360deg);
+            }
+
+            .active {
+                opacity: 1;
+            }
+
+            .inactive {
+                opacity: 0;
+            }
+        }
+    }
+
+    //Toggler handle
+    .toggler {
+        position: relative;
+        display: block;
+        height: 34px;
+        width: 61px;
+        border: 1px solid darken($fade-grey, 5%);
+        background: darken($fade-grey, 5%);
+        border-radius: 100px;
+        transition: all .3s;
+
+        //States
+        .active, .inactive {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(0) rotate(0);
+            transition: all .3s ease;
+
+            svg {
+                stroke: $white;
+                height: 14px;
+                width: 14px;
+                stroke-width: 3px;
+            }
+        }
+
+        .inactive {
+            background: $white;
+            border-color: $placeholder;
+            opacity: 1;
+            z-index: 1;
+
+            svg {
+                stroke: $muted-grey;
+            }
+        }
+
+        .active {
+            background: $primary;
+            border-color: $primary;
+            box-shadow: $primary-box-shadow;
+            opacity: 0;
+            z-index: 0;
+        }
+    }
+}
+
+/* ==========================================================================
+Animated checkbox
+========================================================================== */
+
+$curve: cubic-bezier(0.65, 0, 0.45, 1);
+
+.animated-checkbox {
+    position: relative;
+    height: 32px;
+    width: 32px;
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .checkmark-wrap {
+        position: relative;
+        height: 32px;
+        width: 32px;
+
+        .shadow-circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            border: 1px solid $placeholder;
+            z-index: 0;
+            opacity: 1;
+            transition: all .2s;
+
+            &.is-opaque {
+                opacity: 0;
+            }
+        }
+
+        .checkmark-circle {
+            height: 32px;
+            width: 32px;
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: $primary;
+            fill: none;
+            stroke: $primary;
+        }
+
+        //Checkmark
+        .checkmark {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: $placeholder;
+            stroke-miterlimit: 10;
+
+            //margin: 10% auto;
+            box-shadow: inset 0px 0px 0px $primary;
+        }
+
+        //Check symbol
+        .checkmark-check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            stroke: $primary;
+        }
+    }
+
+    &.is-checked {
+        .checkmark-circle {
+            animation: stroke 0.6s $curve both;
+        }
+
+        .checkmark-check {
+            animation: stroke 0.3s $curve 0.8s both;
+        }
+    }
+
+    &.is-unchecked {
+        .checkmark-circle {
+            animation: reverseCircle 0.6s $curve 0.2s both;
+        }
+
+        .checkmark-check {
+            animation: reverseCheck 0.3s $curve 0.1s both;
+        }
+    }
+
+    //Keyframes
+    @keyframes stroke {
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes reverseCircle {
+        from {
+            stroke-dashoffset: 0;
+        }
+
+        to {
+            stroke-dashoffset: 166;
+        }
+    }
+
+    @keyframes reverseCheck {
+        from {
+            stroke-dashoffset: 0;
+        }
+
+        to {
+            stroke-dashoffset: 48;
+        }
+    }
+}

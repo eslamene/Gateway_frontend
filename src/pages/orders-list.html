@@ -1,0 +1,495 @@
+---
+layout: default
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader}}
+
+<!-- Mobile Navbar-->
+{{> mobile-navbar}}
+
+<!-- Main Sidebar-->
+{{> shop-sidebar}}
+
+<!-- FAB -->
+{{> flying-button}}
+
+<!-- Categories Right quickview -->
+{{> quickview-categories}}
+
+<!-- Shop quickview -->
+{{> quickview-main}}
+
+<!-- Cart quickview -->
+{{> quickview-cart}}
+
+<!-- Main wrapper -->
+<div class="shop-wrapper">
+
+    {{> search-overlay}}
+
+    <!-- Main section -->
+    <div id="orders-list" class="section">
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Orders List -->
+            <div class="columns account-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <div class="account-title">
+                        <h2>MY ORDERS</h2>
+                        <img class="brand-filigrane" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                    </div>
+
+                    <!-- Account tabs -->
+                    <div class="tabs account-tabs has-controls">
+                        <ul>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li class="is-active"><a href="orders.html">Orders</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="listing-controls">
+                        <div class="layout-controls">
+                            <a href="orders.html"><span><i data-feather="grid"></i></span></a>
+                            <a href="orders-list.html"><span class="is-active"><i data-feather="list"></i></span></a>
+                        </div>
+                        <!-- Sort -->
+                        <div class="sort-box">
+                            <div class="sort-box-select">
+                                <select data-placeholder="Default order" class="chosen-select-no-single">
+                                    <option>All Orders</option>
+                                    <option>Pending</option>
+                                    <option>In Progress</option>
+                                    <option>Complete</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Controls -->
+
+                    <div id="orders-main-placeholder" class="main-placeholder is-hidden">
+                        <div class="placeholder-content">
+                            <img src="assets/img/illustrations/shop.svg" alt="">
+                            <h3>Welcome, Guest</h3>
+                            <p>Guest users don't have accounts. Please login or register to view your account.</p>
+                            <div class="button-wrap">
+                                <a href="./authentication.html" class="button big-button primary-button rounded raised">Log In</a>
+                            </div>
+                            <a>Don't have an account?</a>
+                        </div>
+                    </div>
+
+                    <div id="orders-empty-placeholder" class="main-placeholder is-hidden">
+                        <div class="placeholder-content">
+                            <img src="assets/img/illustrations/shop.svg" alt="">
+                            <h3>No Orders</h3>
+                            <p>You have no orders to show. Your order details will be stored here, once you checkout.</p>
+                            <div class="button-wrap">
+                                <a href="./products.html" class="button big-button primary-button rounded raised">Continue Shopping</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orders  -->
+                    <div id="orders-main" class="columns is-account-grid is-multiline">
+                        <!--Loader-->
+                        <div class="account-loader is-active">
+                            <div class="loader is-pulled is-loading"></div>
+                        </div>
+                        <!--Orders-->
+                        <div class="column is-12">
+                            <!--Order-->
+                            <div class="order-long-card">
+                                <div class="left-side">
+                                    <div class="order-header">
+                                        <h3>ORDER 46895</h3>
+                                        <span class="date">Aug 17 2019</span>
+                                        <span class="tag is-primary">Shipping</span>
+                                        <span class="order-total">365.45</span>
+                                    </div>
+                                    <!--List-->
+                                    <div class="ordered-products has-slimscroll">
+                                        <!--Loader-->
+                                        <div class="products-loader">
+                                            <div class="loader is-loading"></div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/red-seat.png" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Red Seat</span>
+                                                <span class="price">
+                                                    <span>45.00</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>45.00</span>
+                                            </div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/blue-seat.png" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Blue Seat</span>
+                                                <span class="price">
+                                                    <span>35.00</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>35.00</span>
+                                            </div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/dark-seat.jpg" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Dark Seat</span>
+                                                <span class="price">
+                                                    <span>52.25</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>52.25</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <!-- Background Nephos Icon -->
+                                    <img class="side-bg" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                                    <div class="meta-header">
+                                        <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/janet.jpg" alt="">
+                                        <div class="inner-meta">
+                                            <span>Handled by</span>
+                                            <span>Janet Smith</span>
+                                        </div>
+                                        <a class="support">
+                                            <i data-feather="life-buoy"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="meta-actions">
+                                        <a class="button is-rounded is-fullwidth primary-button raised">Order Details</a>
+                                        <a class="button is-rounded is-fullwidth grey-button rounded">Invoice</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Order-->
+                            <div class="order-long-card">
+                                <div class="left-side">
+                                    <div class="order-header">
+                                        <h3>ORDER 46878</h3>
+                                        <span class="date">Jul 5 2019</span>
+                                        <span class="tag is-success">Preparing</span>
+                                        <span class="order-total">411.52</span>
+                                    </div>
+                                    <!--List-->
+                                    <div class="ordered-products has-slimscroll">
+                                        <!--Loader-->
+                                        <div class="products-loader">
+                                            <div class="loader is-loading"></div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kids2.jpg" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Rabbit Lamp</span>
+                                                <span class="price">
+                                                    <span>14.49</span>
+                                                    <span>x <var>2</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>28.98</span>
+                                            </div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kids4.jpg" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Toy Boxes</span>
+                                                <span class="price">
+                                                    <span>80.00</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>80.00</span>
+                                            </div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kids7.jpg" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Child Desk</span>
+                                                <span class="price">
+                                                    <span>185.25</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>185.25</span>
+                                            </div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kids6.jpg" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Animals Set</span>
+                                                <span class="price">
+                                                    <span>23.49</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>23.49</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <!-- Background Nephos Icon -->
+                                    <img class="side-bg" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                                    <div class="meta-header">
+                                        <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/marc.jpg" alt="">
+                                        <div class="inner-meta">
+                                            <span>Handled by</span>
+                                            <span>Mark Korsky</span>
+                                        </div>
+                                        <a class="support">
+                                            <i data-feather="life-buoy"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="meta-actions">
+                                        <a class="button is-rounded is-fullwidth primary-button raised">Order Details</a>
+                                        <a class="button is-rounded is-fullwidth grey-button rounded">Invoice</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Order-->
+                            <div class="order-long-card">
+                                <div class="left-side">
+                                    <div class="order-header">
+                                        <h3>ORDER 42135</h3>
+                                        <span class="date">Jun 27 2019</span>
+                                        <span class="tag is-warning">Processing</span>
+                                        <span class="order-total">412.50</span>
+                                    </div>
+                                    <!--List-->
+                                    <div class="ordered-products has-slimscroll">
+                                        <!--Loader-->
+                                        <div class="products-loader">
+                                            <div class="loader is-loading"></div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kids3.png" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">White Bed</span>
+                                                <span class="price">
+                                                    <span>375.00</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>375.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <!-- Background Nephos Icon -->
+                                    <img class="side-bg" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                                    <div class="meta-header">
+                                        <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/lauren.png" alt="">
+                                        <div class="inner-meta">
+                                            <span>Handled by</span>
+                                            <span>Lauren Hill</span>
+                                        </div>
+                                        <a class="support">
+                                            <i data-feather="life-buoy"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="meta-actions">
+                                        <a class="button is-rounded is-fullwidth primary-button raised">Order Details</a>
+                                        <a class="button is-rounded is-fullwidth grey-button rounded">Invoice</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Order-->
+                            <div class="order-long-card">
+                                <div class="left-side">
+                                    <div class="order-header">
+                                        <h3>ORDER 39456</h3>
+                                        <span class="date">Jun 3 2019</span>
+                                        <span class="tag is-danger">Blocked</span>
+                                        <span class="order-total">1063.82</span>
+                                    </div>
+                                    <!--List-->
+                                    <div class="ordered-products has-slimscroll">
+                                        <!--Loader-->
+                                        <div class="products-loader">
+                                            <div class="loader is-loading"></div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/access1.jpg" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Styled Lamp</span>
+                                                <span class="price">
+                                                    <span>178.00</span>
+                                                    <span>x <var>2</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>356.00</span>
+                                            </div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/access2.jpg" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Golden Lamp</span>
+                                                <span class="price">
+                                                    <span>178.00</span>
+                                                    <span>x <var>2</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>356.00</span>
+                                            </div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/access3.jpg" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Aquarium</span>
+                                                <span class="price">
+                                                    <span>235.00</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>235.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <!-- Background Nephos Icon -->
+                                    <img class="side-bg" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                                    <div class="meta-header">
+                                        <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/marc.jpg" alt="">
+                                        <div class="inner-meta">
+                                            <span>Handled by</span>
+                                            <span>Mark Korsky</span>
+                                        </div>
+                                        <a class="support">
+                                            <i data-feather="life-buoy"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="meta-actions">
+                                        <a class="button is-rounded is-fullwidth primary-button raised">Order Details</a>
+                                        <a class="button is-rounded is-fullwidth grey-button rounded">Invoice</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Order-->
+                            <div class="order-long-card">
+                                <div class="left-side">
+                                    <div class="order-header">
+                                        <h3>ORDER 38246</h3>
+                                        <span class="date">May 15 2019</span>
+                                        <span class="tag is-primary">Complete</span>
+                                        <span class="order-total">636.32</span>
+                                    </div>
+                                    <!--List-->
+                                    <div class="ordered-products has-slimscroll">
+                                        <!--Loader-->
+                                        <div class="products-loader">
+                                            <div class="loader is-loading"></div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/house1.png" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">TV Furniture</span>
+                                                <span class="price">
+                                                    <span>430.00</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>430.00</span>
+                                            </div>
+                                        </div>
+                                        <!--Ordered Product-->
+                                        <div class="ordered-product">
+                                            <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/products/kitchen3.png" alt="">
+                                            <div class="product-meta">
+                                                <span class="name">Mini Kitchen</span>
+                                                <span class="price">
+                                                    <span>142.00</span>
+                                                    <span>x <var>1</var></span>
+                                                </span>
+                                            </div>
+                                            <div class="product-subtotal">
+                                                <span>Total</span>
+                                                <span>142.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <!-- Background Nephos Icon -->
+                                    <img class="side-bg" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                                    <div class="meta-header">
+                                        <img src="http://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/janet.jpg" alt="">
+                                        <div class="inner-meta">
+                                            <span>Handled by</span>
+                                            <span>Janet Smith</span>
+                                        </div>
+                                        <a class="support">
+                                            <i data-feather="life-buoy"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="meta-actions">
+                                        <a class="button is-rounded is-fullwidth primary-button raised">Order Details</a>
+                                        <a class="button is-rounded is-fullwidth grey-button rounded">Invoice</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Orders List -->
+        </div>
+        <!-- /Container -->
+    </div>
+    <!-- /Main section -->
+</div>
+<!-- /Main wrapper -->

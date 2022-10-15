@@ -1,0 +1,347 @@
+/*! _cards.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Shop cards
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Basic Flat Card
+1. List Flat cards
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Basic Flat Card
+========================================================================== */
+
+//minimal card
+.flat-card {
+    position: relative;
+    background-color: $white;
+    border: 1px solid $fade-grey;
+    border-radius: 0.1875rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.5s;
+    max-height: 270px;
+    min-height: 270px;
+
+    //product image
+    .image {
+        text-align: center;
+        margin: 40px 0;
+
+        img {
+            max-width: 100px;
+            margin: 10px auto;
+        }
+    }
+
+    //product meta
+    .product-info {
+        padding: 0 20px;
+
+        a {
+            color: $dark-text;
+
+            &:hover {
+                opacity: 0.8;
+                color: $primary;
+            }
+        }
+
+        //name
+        .product-name {
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-weight: 500;
+        }
+
+        //description
+        .product-description {
+            font-size: 80%;
+            color: $muted-grey;
+        }
+
+        //price
+        .product-price {
+            font-size: 90%;
+            font-weight: 500;
+            color: $primary;
+
+            span:first-child {
+                &:before {
+                    content: '$';
+                    font-size: 80%;
+                    position: relative;
+                }
+            }
+
+            //Strike trough price
+            .sale-price {
+                color: $muted-grey;
+                text-decoration: line-through;
+                padding: 0 10px;
+                font-size: 85%;
+
+                &:before {
+                    content: '$';
+                    font-size: 70%;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    //Auto height modifier
+    &.is-auto {
+        height: auto !important;
+        width: 100% !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        max-width: auto !important;
+    }
+
+    //adds a box shadow to the card on hover
+    &:hover {
+        box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.11) !important;
+    }
+
+    //long card modifier
+    &.is-long {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        //Left image
+        .left-image {
+            img {
+                max-width: 260px;
+            }
+
+            &.is-md img {
+                max-width: 220px;
+            }
+        }
+
+        //Featured Name
+        .product-info {
+            .product-name.featured {
+                font-size: 1.2rem;
+            }
+
+            .product-name.featured-md {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    //Animated cart and whishlist icons
+    .actions {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        div, span {
+            display: inline-block;
+            transition: all .3s;
+
+            svg {
+                height: 18px;
+                width: 18px;
+                margin-left: 10px;
+                stroke: $muted-grey;
+                transition: all .3s;
+
+                //opacity: 0;
+           
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            //add to cart
+            &.add {
+                transition-delay: .1s;
+                transform: translateX(250px);
+
+                //Active state
+                svg.is-active {
+                    stroke: $primary;
+                }
+
+                &:hover svg {
+                    stroke: $primary;
+                }
+            }
+
+            //add to wishlist
+            &.like {
+                transition-delay: .2s;
+                transform: translateX(200px);
+
+                //Active state
+                svg.is-active {
+                    stroke: $red;
+                    fill: $red;
+                }
+
+                &:hover svg {
+                    stroke: $red;
+                    fill: $red;
+                }
+            }
+        }
+    }
+
+    //Sales indicator
+    .on-sale {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90px;
+        height: 90px;
+        padding: 9px;
+        background: $primary;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        transform: translate(-50%, -50%) rotate(135deg);
+
+        svg {
+            height: 18px;
+            width: 18px;
+            stroke: $white;
+            transform: rotate(-135deg);
+        }
+    }
+
+    //translate in icons on hover
+    &:hover {
+        .add, .like {
+            transform: translateX(0) !important;
+        }
+    }
+}
+
+/* ==========================================================================
+1. List Flat Card
+========================================================================== */
+
+//List cards
+.flat-card {
+    //List modifier
+    &.is-list-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto !important;
+        padding: 20px 40px;
+        margin-top: 20px;
+
+        &:first-child {
+            margin-top: 0 !important;
+        }
+
+        //Adjusting spans to display block
+        span {
+            display: block;
+
+            &.image {
+                margin: 0 !important;
+                width: 80px;
+                height: 80px;
+
+                img {
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        //Star Rating
+        .rating {
+            i {
+                font-size: 12px;
+                color: #FFD700;
+
+                &.is-empty {
+                    color: $placeholder;
+                }
+            }
+
+            small {
+                padding: 0 5px;
+                font-size: .65rem;
+                color: $muted-grey;
+            }
+        }
+
+        //Product meta
+        .product-info {
+            padding: 20px 40px !important;
+
+            .product-price {
+                span {
+                    display: inline-block !important;
+                }
+            }
+        }
+
+        //Abstract
+        .product-abstract {
+            margin-left: auto;
+            padding: 15px 0;
+            width: 40%;
+            color: $muted-grey;
+            font-size: .8rem;
+
+            //View more link
+            .view-more {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 5px 0;
+
+                a {
+                    font-size: .75rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    svg {
+                        position: relative;
+
+                        //top: 1.4px;
+                        height: 16px;
+                        width: 16px;
+                        opacity: 0;
+                        transform: translate(0);
+                        transition: all .3s;
+                    }
+
+                    &:hover svg {
+                        opacity: 1;
+                        transform: translate(3px);
+                    }
+                }
+            }
+        }
+
+        //Actions
+        .actions {
+            right: 40px !important;
+
+            span {
+                display: inline-block !important;
+            }
+        }
+    }
+}

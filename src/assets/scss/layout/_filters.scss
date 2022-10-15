@@ -1,0 +1,128 @@
+/*! _filters.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Filters
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Price range filter
+1. Range input
+2. Checkboxes
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Price range filter
+========================================================================== */
+
+//Price range filter
+.price-range-wrapper {
+    //Labels
+    .price-limit {
+        position: relative;
+        top: 3px;
+        float: left;
+        color: $muted-grey;
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 5px;
+        small {
+            font-size: 70%;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Range Input
+========================================================================== */
+
+//Slider
+.range-slider {
+    position: relative;
+    width: 220px;
+    float: left;
+    margin: 0 4px;
+    //Output
+    .slider-output {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        small {
+            font-size: .8rem;
+            color: $muted-grey;
+        }
+
+    }
+    //Range
+    .input-range {
+        -webkit-appearance: none;
+        width: 220px;
+        height: 5px;
+        border-radius: 5px;
+        background: #ccc;
+        outline: none;
+    }
+    .input-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: $primary;
+        cursor: pointer;
+        -webkit-transition: background .15s ease-in-out;
+        transition: background .15s ease-in-out;
+        -webkit-transition: transform .3s;
+        transition: transform .3s;
+        transform: scale(1);
+    }
+    .input-range::-webkit-slider-thumb:hover {
+        background: $primary;
+    }
+    .input-range:active::-moz-range-thumb {
+        background: $primary;
+    }
+    .input-range::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        border: 0;
+        border-radius: 50%;
+        background: $primary;
+        cursor: pointer;
+        -webkit-transition: background .15s ease-in-out;
+        transition: background .15s ease-in-out;
+    }
+    .range-value {
+        display: block !important;
+        position: relative;
+        color: $primary;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0 10px;
+    }
+    ::-moz-range-track {
+        background: #ccc;
+        border: 0;
+    }
+    input::-moz-focus-inner {
+        border: 0;
+    }
+}
+
+/* ==========================================================================
+2. Checkboxes
+========================================================================== */
+
+.columns.is-checkboxes {
+    .column {
+        .field {
+            margin: 5px 0;
+        }
+    }
+}
+
+
+
+

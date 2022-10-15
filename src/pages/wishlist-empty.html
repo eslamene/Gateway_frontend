@@ -1,0 +1,118 @@
+---
+layout: default
+title: Payment Acceptance Gateway
+---
+
+{{> pageloader}}
+
+<!-- Mobile Navbar-->
+{{> mobile-navbar}}
+
+<!-- Main Sidebar-->
+{{> shop-sidebar}}
+
+<!-- FAB -->
+{{> flying-button}}
+
+<!-- Categories Right quickview -->
+{{> quickview-categories}}
+
+<!-- Shop quickview -->
+{{> quickview-main}}
+
+<!-- Cart quickview -->
+{{> quickview-cart}}
+
+<!-- Main wrapper -->
+<div class="shop-wrapper">
+
+    {{> search-overlay}}
+
+    <!-- Main section -->
+    <div id="shop-wishlist-empty" class="section">
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Wishlists Layout -->
+            <div class="columns account-header">
+                <div class="column main-column is-tablet-landscape-padded">
+                    <!-- title -->
+                    <div class="account-title">
+                        <h2>WISHLIST</h2>
+                        <!-- Icon filigrane -->
+                        <img class="brand-filigrane" src="assets/img/logo/nephos-greyscale.svg" alt="">
+                    </div>
+
+                    <!-- Account tabs -->
+                    <div class="tabs account-tabs">
+                        <ul>
+                            <li><a href="account.html">Account</a></li>
+                            <li class="is-active"><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="orders.html">Orders</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="wishlist-main-placeholder" class="main-placeholder">
+                        <div class="placeholder-content">
+                            <img src="assets/img/illustrations/add-to-cart.svg" alt="">
+                            <h3>Welcome, Guest</h3>
+                            <p>Please login to your account, or create a new one to be able to use wishlists.</p>
+                            <div class="button-wrap">
+                                <a class="button big-button primary-button rounded raised">Log In</a>
+                            </div>
+                            <a>Don't have an account?</a>
+                        </div>
+                    </div>
+
+                    <div id="wishlist-empty-placeholder" class="main-placeholder is-hidden">
+                        <div class="placeholder-content">
+                            <img src="assets/img/illustrations/add-to-cart.svg" alt="">
+                            <h3>No Wishlists</h3>
+                            <p>You currently don't have any wishlist saved. Start by creating one.</p>
+                            <div class="button-wrap">
+                                <a class="button big-button primary-button rounded raised modal-trigger"
+                                    data-modal="new-wishlist">Add Wishlist</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Container -->
+    </div>
+    <!-- /Main section -->
+</div>
+<!-- /Main wrapper -->
+
+<!-- Add Wishlist Modal -->
+<div id="new-wishlist" class="modal wishlist-modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="box">
+            <div class="box-header">
+                <img src="assets/img/logo/nephos-greyscale.svg" alt="">
+                <span>NEW LIST</span>
+                <div class="modal-delete"><i data-feather="x"></i></div>
+            </div>
+            <div class="box-body">
+                <img src="assets/img/illustrations/wishlist.svg" alt="">
+                <div class="inner-content">
+                    <p>Add a new sub list to classify your wishlist items. You can then manage them and find them more
+                        easily.</p>
+                    <div class="control">
+                        <input id="new-wishlist-input" type="text" class="input is-minimal" placeholder="Wishlist name">
+                    </div>
+                    <div class="button-wrap">
+                        <button type="submit"
+                            class="button add-wishlist-action is-fullwidth feather-button is-bold primary-button raised">
+                            Create
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Add Wishlist Modal -->

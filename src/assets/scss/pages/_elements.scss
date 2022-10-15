@@ -1,0 +1,585 @@
+/*! _elements.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Nephos elements styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Layout
+1. Inputs
+2. Native Selects
+3. Chosen Selects
+4. Autocomplete
+5. Spinner
+6. Tabs
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Layout
+========================================================================== */
+
+//Element card selector
+.is-element-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+
+    //title
+    .element-card-title {
+        text-transform: uppercase;
+        font-size: .75rem;
+        font-weight: 500;
+    }
+
+    img {
+        max-width: 120px;
+        width: 120px;
+        margin: 5px 0;
+    }
+
+    //button
+    .view-element {
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+
+        a {
+            font-weight: 600;
+        }
+    }
+}
+
+//Main Element card
+.is-element-details {
+    border: none !important;
+    margin-bottom: 20px;
+
+    //overflow modifier
+    &.has-overflow {
+        overflow: visible !important;
+    }
+
+    .columns.is-gapless {
+        background: $sidebar;
+    }
+
+    .is-component, .is-description {
+        .inner {
+            padding: 40px;
+        }
+    }
+
+    //component side
+    .is-component {
+        background: $white;
+
+        .control {
+            //margin-bottom: 20px;
+        }
+
+        &.is-grey {
+            background: $smoke-white;
+        }
+    }
+
+    //description side
+    .is-description {
+        color: $smoke-white !important;
+
+        .divider {
+            height: 1.6px;
+            background: $smoke-white;
+            border-radius: 50px;
+            width: 60px;
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: $smoke-white !important;
+        }
+
+        p {
+            font-family: 'Raleway', sans-serif;
+            font-size: .85rem;
+            margin-bottom: 10px;
+        }
+
+        code {
+            color: #ffcc00;
+            background: transparent !important;
+        }
+    }
+}
+
+//Spacer element
+.spacer {
+    padding: 20px 0;
+}
+
+/* ==========================================================================
+1. Inputs
+========================================================================== */
+
+//Validation
+.control {
+    &.required {
+        position: relative;
+
+        .input {
+            padding-right: 36px;
+        }
+
+        //icon
+        svg {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 16px;
+            height: 16px;
+            display: none;
+            stroke-width: 2.4px;
+
+            &.success-icon {
+                stroke: $green;
+            }
+
+            &.error-icon {
+                stroke: $red;
+            }
+
+            &.warning-icon {
+                stroke: $orange;
+            }
+        }
+
+        //Status
+        .status-text {
+            span {
+                font-size: 60%;
+                font-family: 'Raleway', sans-serif;
+                display: none;
+
+                &.success-text {
+                    color: $green;
+                }
+
+                &.warning-text {
+                    color: $orange;
+                }
+
+                &.error-text {
+                    color: $red;
+                }
+            }
+        }
+
+        //success modifier
+        &.has-success {
+            .input {
+                border-color: $green !important;
+            }
+
+            .success-icon, .success-text {
+                display: block;
+            }
+        }
+
+        //warning modifier
+        &.has-warning {
+            .input {
+                border-color: $orange !important;
+            }
+
+            .warning-icon, .warning-text {
+                display: block;
+            }
+        }
+
+        //error modifier
+        &.has-error {
+            .input {
+                border-color: $red !important;
+            }
+
+            .error-icon, .error-text {
+                display: block;
+            }
+        }
+    }
+
+    //Addon modifier
+    &.has-module {
+        position: relative;
+
+        //Block modifier
+        &.has-block {
+            .input {
+                padding-right: 40px;
+            }
+
+            .input-block {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 40px;
+                width: 40px;
+                background: #ededed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 500;
+            }
+        }
+
+        //Button modifier
+        &.has-button {
+            .input {
+                padding-right: 70px;
+            }
+
+            .input-button {
+                height: 30px;
+                background: $secondary;
+                color: $white;
+                padding: 8px 14px;
+                font-size: .7rem;
+                line-height: 1.2;
+                border-radius: 3px;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                transition: opacity .3s;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        //Icon modifier
+        &.has-icon {
+            .input {
+                padding-left: 40px;
+
+                &:focus {
+                    border-color: $primary;
+
+                    + svg {
+                        stroke: $primary;
+                    }
+                }
+            }
+
+            svg {
+                height: 22px;
+                width: 22px;
+                position: absolute;
+                top: 7px;
+                left: 10px;
+                stroke: $placeholder;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+2. Selects
+========================================================================== */
+
+//Native selects
+.control {
+    &.has-select-icon {
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 7px;
+            left: 10px;
+            width: 18px;
+            height: 18px;
+            color: #ccc;
+        }
+
+        .styledSelect {
+            left: 36px !important;
+        }
+
+        &.is-loading::after {
+            left: .625em !important;
+            top: .49em !important;
+        }
+    }
+}
+
+//Hide native input
+.s-hidden {
+    visibility: hidden;
+    padding-right: 10px;
+}
+
+.select-wrap:not(.is-multiple) {
+    height: 2.85em !important;
+}
+
+//Select styles
+.select-wrap {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    font: normal 11px/22px Arial, Sans-Serif;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+.styledSelect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    color: $muted-grey;
+    padding: 0 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.styledSelect:active, .styledSelect.active {
+    background-color: $smoke-white;
+}
+
+//Options styles
+.options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.options li {
+    padding: 5px 6px;
+    margin: 0 0;
+    padding: 5px 10px;
+}
+
+.options li:hover {
+    background-color: $primary;
+    color: $white;
+}
+
+/* ==========================================================================
+3. Chosen Selects
+========================================================================== */
+
+//Loading state
+.control.is-loading.is-preloading {
+    &:after {
+        left: .625em !important;
+        top: 0.8em !important;
+    }
+
+    &.native {
+        &:after {
+            top: 0.5em !important;
+        }
+    }
+
+    .chosen-single {
+        padding-left: 36px !important;
+    }
+}
+
+//Styles for select multiple
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+    height: 40px !important;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+    background-color: $primary !important;
+    margin: 10px 12px 10px -8px !important;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+    top: 0px !important;
+}
+
+/* ==========================================================================
+4. Autocomplete
+========================================================================== */
+
+.easy-autocomplete {
+    width: 100% !important;
+}
+
+//Base class
+.autocpl {
+    box-shadow: none !important;
+
+    //container
+    .easy-autocomplete-container {
+        ul {
+            padding: 10px !important;
+
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+//template-wrapper
+.template-wrapper {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+
+    //avatar
+    .autocpl-avatar {
+        display: block;
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 100px !important;
+    }
+
+    .autocpl-country {
+        display: block;
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 100px !important;
+        object-fit: cover;
+    }
+
+    .autocpl-product {
+        display: block;
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 6px !important;
+    }
+
+    //text
+    .entry-text {
+        margin-left: 15px;
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        span {
+            font-size: 0.8rem;
+            color: $title-grey;
+        }
+    }
+}
+
+/* ==========================================================================
+5. Spinner
+========================================================================== */
+
+//Spinner wrapper
+.spinner-control {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    //input
+    input {
+        height: 36px;
+        border-top: 1px solid #cecece;
+        border-bottom: 1px solid #cecece;
+        border-left: none !important;
+        border-right: none !important;
+
+        &:focus, &:active {
+            border-top: 1px solid $smoke-white !important;
+            border-bottom: 1px solid $smoke-white !important;
+            outline: non !important;
+        }
+    }
+
+    //button
+    .spinner-button {
+        width: 36px;
+        height: 36px;
+        background: $fade-grey;
+        border: 1px solid #cecece;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+
+        //icon
+        svg {
+            width: 16px;
+            height: 16px;
+            stroke-width: 1.6px;
+            stroke: $muted-grey;
+            transition: all .3s;
+        }
+
+        &:hover {
+            opacity: 0.7;
+
+            svg {
+                stroke: $primary;
+            }
+        }
+    }
+
+    //left button radius
+    .input-group-prepend {
+        .spinner-button {
+            border-radius: 4px 0 0 4px;
+        }
+    }
+
+    //right button radius
+    .input-group-append {
+        .spinner-button {
+            border-radius: 0 4px 4px 0;
+        }
+    }
+}
+
+/* ==========================================================================
+6. Tabs
+========================================================================== */
+
+//Setting colors and typography
+.tabs-wrapper {
+    &.underline-tabs {
+        .tabs ul li {
+            a {
+                color: $placeholder;
+            }
+
+            &.is-active {
+                a {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .navtab-content {
+        font-family: 'Raleway', sans-serif;
+        font-size: .9rem;
+    }
+}

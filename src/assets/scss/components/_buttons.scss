@@ -1,0 +1,344 @@
+/*! _buttons.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Button styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Basic buttons
+1. Colored buttons
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Basic buttons
+========================================================================== */
+
+.button {
+    //make the button bigger
+    &.big-button {
+        padding: 18px 36px 22px 36px !important;
+
+        //bold and outlined
+        &.btn-outlined.is-bold {
+            border-width: 2px;
+            font-weight: 600;
+        }
+
+        &.is-bold {
+            font-weight: 600;
+        }
+    }
+
+    //Hover raised buttons
+    &.raised:hover {
+        box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
+        opacity: 0.8;
+    }
+
+    //Uppercase button
+    &.upper-button {
+        text-transform: uppercase;
+
+        &.is-bold {
+            font-weight: 600 !important;
+        }
+    }
+
+    //Rounded buttons
+    &.rounded {
+        border-radius: 500px;
+    }
+
+    //Helios CTA button
+    &.feather-button {
+        min-width: 130px;
+        font-weight: 200;
+        font-size: 80%;
+        height: 40px;
+
+        &.is-pushed {
+            margin-left: auto;
+        }
+
+        svg {
+            position: relative;
+            top: 1px;
+            width: 17px;
+            height: 17px;
+            margin-right: 8px;
+        }
+
+        //size modifier
+        &.is-small {
+            min-width: 100px;
+            height: 32px;
+            font-size: 60%;
+            font-weight: 500;
+        }
+
+        //Bold weight
+        &.is-bold {
+            font-weight: 500 !important;
+            font-size: .75rem;
+            text-transform: uppercase;
+            border-width: 2px;
+        }
+    }
+}
+
+button[type=submit], .will-upload {
+    display: block !important;
+    text-align: center !important;
+}
+
+/* ==========================================================================
+1. Colored Buttons
+========================================================================== */
+
+//primary button
+.button.primary-button {
+    outline: none;
+    border-color: $primary;
+    background-color: $primary;
+    color: $white;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $white;
+    }
+
+    //raised state
+    &.raised:hover {
+        box-shadow: $primary-box-shadow;
+        opacity: 0.9 0.5;
+
+        &.opaque {
+            opacity: 1 !important;
+        }
+    }
+
+    //outlined button
+    &.btn-outlined {
+        border-color: $primary;
+        color: $primary !important;
+        background-color: transparent;
+
+        &:hover {
+            color: $white !important;
+            background-color: $primary;
+        }
+    }
+
+    &:focus {
+        border-color: $primary;
+    }
+}
+
+//secondary button
+.button.secondary-button {
+    outline: none;
+    border-color: $secondary;
+    background-color: $secondary;
+    color: $white;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $white;
+    }
+
+    //raised state
+    &.raised:hover {
+        box-shadow: $secondary-box-shadow;
+        opacity: 0.95;
+
+        &.opaque {
+            opacity: 1 !important;
+        }
+    }
+
+    //outlined button
+    &.btn-outlined {
+        border-color: $secondary;
+        color: $secondary;
+        background-color: transparent;
+
+        &:hover {
+            color: $white;
+            background-color: $secondary;
+        }
+    }
+
+    &:focus {
+        border-color: $secondary;
+    }
+}
+
+//accent button
+.button.accent-button {
+    outline: none;
+    border-color: $accent;
+    background-color: $accent;
+    color: $white;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $white;
+    }
+
+    //raised state
+    &.raised:hover {
+        box-shadow: $accent-box-shadow;
+        opacity: 0.8;
+
+        &.opaque {
+            opacity: 1 !important;
+        }
+    }
+
+    //outlined button
+    &.btn-outlined {
+        border-color: $accent;
+        color: $accent;
+        background-color: transparent;
+
+        &:hover {
+            color: $white;
+            background-color: $accent;
+        }
+    }
+
+    &:focus {
+        border-color: $accent;
+    }
+}
+
+//Grey button
+.button.grey-button {
+    outline: none;
+    border-color: $accent-grey;
+    background-color: $accent-grey;
+    color: $white;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $white;
+    }
+
+    //raised state
+    &.raised:hover {
+        opacity: 0.8;
+
+        &.opaque {
+            opacity: 1 !important;
+        }
+    }
+
+    //outlined button
+    &.btn-outlined {
+        border-color: $accent-grey;
+        color: $accent-grey;
+        background-color: transparent;
+
+        &:hover {
+            color: $white;
+            background-color: $accent-grey;
+        }
+    }
+
+    &:focus {
+        border-color: $accent-grey;
+    }
+}
+
+//Pop button
+@mixin particle {
+    z-index: 0;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+
+    //opacity: 0;
+    border-radius: 50%;
+}
+
+.pop-button {
+    position: relative;
+
+    .button {
+        position: relative;
+        z-index: 1;
+    }
+
+    .p1 {
+        @include particle;
+
+        //left: 75px;
+        //top: 25px;
+        width: 10px;
+        height: 10px;
+        background-color: $primary;
+    }
+
+    .p2 {
+        @include particle;
+
+        //left: 25px;
+        //top: 25px;
+        width: 10px;
+        height: 10px;
+        border: 1.4px solid $primary;
+    }
+
+    .p3 {
+        @include particle;
+
+        //left: 75px;
+        //top: 25px;
+        width: 4px;
+        height: 4px;
+        background-color: $primary;
+    }
+
+    .p4 {
+        @include particle;
+
+        //left: 75px;
+        //top: 25px;
+        width: 8px;
+        height: 8px;
+        border: 2px solid $primary;
+    }
+
+    .p5 {
+        @include particle;
+
+        //left: 10px;
+        //top: 10px;
+        width: 8px;
+        height: 8px;
+        background-color: $primary;
+    }
+
+    .p6 {
+        @include particle;
+
+        //left: 120px;
+        //top: 25px;
+        width: 12px;
+        height: 12px;
+        border: 1.4px solid $primary;
+    }
+
+    .p7 {
+        @include particle;
+
+        //left: 45px;
+        //top: 25px;
+        width: 5px;
+        height: 5px;
+        background-color: $primary;
+    }
+}

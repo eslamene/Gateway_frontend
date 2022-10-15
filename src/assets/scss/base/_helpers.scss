@@ -1,0 +1,96 @@
+/*! _helpers.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Nephos helpers
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Spacing
+1. Colors
+2. Scroll
+3. States
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Spacing
+========================================================================== */
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.mt-80 {
+    margin-top: 80px !important;
+}
+
+.ml-5 {
+    margin-left: 5px !important;
+}
+
+.mr-5 {
+    margin-right: 5px !important;
+}
+
+.is-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ==========================================================================
+1. Colors
+========================================================================== */
+
+.muted-text {
+    color: $muted-grey !important;
+}
+
+.light-text {
+    color: $white !important;
+}
+
+/* ==========================================================================
+2. Scroll
+========================================================================== */
+
+.has-slimscroll {
+    overflow-x: hidden !important;
+
+    &::-webkit-scrollbar {
+        width: 6px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px !important;
+        background: rgba(0, 0, 0, 0.2) !important;
+    }
+}
+
+/* ==========================================================================
+3. States
+========================================================================== */
+
+.no-click {
+    pointer-events: none !important;
+}
+
+.is-vhidden {
+    visibility: hidden !important;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.is-disabled {
+    pointer-events: none;
+    opacity: 0.4;
+    cursor: default !important;
+}

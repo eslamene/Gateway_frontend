@@ -1,0 +1,855 @@
+/*! demo.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Nephos index Demo
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. CSS Imports
+1. Index Hero
+2. Titles
+3. Typed js
+4. Tags
+5. Helpers
+6. Icon boxes
+7. Sections
+8. Footer
+9. View demo links
+10. Mobile media queries
+11. Tablet portrait orientation media queries
+12. Info Modal
+=============================================================================
+***/
+
+/* ==========================================================================
+0. CSS Imports
+========================================================================== */
+
+@import "base/theme-default";
+@import "base/colors";
+@import "base/utils";
+
+//Bulma source import
+@import "../sass/bulma.sass";
+
+@import "abstracts/animations";
+@import "components/buttons";
+@import "components/checkboxes";
+@import "components/pageloader";
+
+/* ==========================================================================
+1. Index Hero
+========================================================================== */
+
+//Canvas
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+//Hero
+.hero {
+    //Background gradient
+    &.is-demo {
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    }
+
+    //Navbar
+    .navbar {
+        position: relative;
+        min-height: 3.75rem;
+        transition: all .3s;
+        z-index: 99;
+
+        //Responsive menu icon
+        .navbar-burger {
+            width: 3.75rem;
+            height: 3.75rem;
+        }
+
+        //Brand
+        .navbar-brand {
+            min-height: 3.75rem;
+
+            img {
+                max-height: 36px !important;
+                height: 36px;
+            }
+
+            //brand text
+            .brand-name {
+                font-family: 'Raleway', sans-serif;
+                font-size: 1.2rem;
+                font-weight: 500;
+                padding: 0 5px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            &:hover {
+                .navbar-item {
+                    background: transparent !important;
+                }
+            }
+        }
+
+        .navbar-item {
+            a {
+                font-family: 'Raleway', sans-serif;
+            }
+        }
+
+        //Light navbar
+        &.is-light {
+            .navbar-brand {
+                .brand-name {
+                    color: $white;
+                }
+            }
+
+            .navbar-item {
+                a {
+                    color: $white;
+                }
+            }
+
+            .navbar-burger span {
+                background-color: $white !important;
+            }
+
+            //Responsive menu
+            .navbar-menu {
+                &.is-active {
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+        }
+
+        //Fixed navbar modifier
+        &.is-fixed {
+            background: $white;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+
+            a {
+                color: $dark-text;
+
+                &:hover {
+                    color: $primary;
+                }
+
+                &.button {
+                    color: $white !important;
+                }
+            }
+        }
+    }
+
+    //Cloned fixed navbar
+    #navbar-clone {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(-100%);
+        z-index: 100;
+
+        &.is-active {
+            transform: translateY(0);
+        }
+    }
+
+    .hero-foot {
+        padding: 20px 0;
+    }
+
+    .hero-logo {
+        height: 50px;
+    }
+}
+
+//Main wrapper
+.content-wrapper {
+    padding: 40px 0;
+}
+
+.section {
+    outline: none !important;
+
+    &:active, &:focus {
+        outline: none !important;
+    }
+}
+
+/* ==========================================================================
+2. Titles
+========================================================================== */
+
+//Colors and font
+.title, .subtitle {
+    font-family: 'Raleway', sans-serif;
+
+    &.is-light {
+        color: $white;
+    }
+
+    &.is-muted {
+        color: $muted-grey;
+    }
+
+    &.no-mb {
+        margin-bottom: 0 !important;
+    }
+}
+
+//Filigrane logo setup
+.title-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+
+    .filigrane {
+        height: 75px;
+        width: 75px;
+        opacity: 0.5;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(50% - 60px);
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+3. Typed js
+========================================================================== */
+
+//Cursor animation
+.typed-cursor {
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ==========================================================================
+4. Tags
+========================================================================== */
+.tag {
+    &.is-primary {
+        background-color: $primary !important;
+        color: $white !important;
+    }
+
+    &.is-secondary {
+        background-color: $secondary !important;
+        color: $white !important;
+    }
+}
+
+/* ==========================================================================
+5. helpers
+========================================================================== */
+
+.has-xs-side-padding {
+    padding: 0 5px !important;
+}
+
+.box.cta {
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 1.75rem 1.25rem;
+}
+
+.is-base-font {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ==========================================================================
+6. Icon boxes
+========================================================================== */
+
+.spaced-boxes {
+    .icon-box {
+        margin: 10px 0;
+    }
+}
+
+.icon-box {
+    .icon-wrapper {
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+            stroke-width: 1.3px;
+            stroke: $primary;
+        }
+    }
+
+    .box-content {
+        .box-title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .box-text {
+            font-family: 'Raleway', sans-serif;
+            font-size: .9rem;
+            color: $muted-grey;
+        }
+    }
+}
+
+/* ==========================================================================
+7. Sections
+========================================================================== */
+
+//CTA
+.cta-wrapper {
+    margin-top: 60px;
+}
+
+//Columns
+.column {
+    &.is-on-top {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+//Sections
+.section {
+    &.is-grey {
+        background: $section-grey;
+    }
+
+    &.is-relative {
+        position: relative;
+    }
+
+    img {
+        &.is-featured {
+            max-height: 450px;
+        }
+
+        &.is-ui {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            z-index: 0;
+        }
+    }
+
+    p {
+        &.is-muted {
+            color: $muted-grey;
+        }
+
+        &.has-padding-bottom {
+            padding-bottom: 10px;
+        }
+    }
+
+    //divider
+    .feature-divider {
+        height: 2px;
+        background: $primary;
+        width: 60px;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+
+    //Floating circle card
+    .ball {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+        margin: 0 auto;
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
+
+        //indicator
+        &.has-version {
+            position: relative;
+
+            .v-indicator {
+                position: absolute;
+                top: 3px;
+                right: 4px;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background: $secondary;
+                font-size: .6rem;
+                font-weight: 500;
+                color: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &.has-delay-1 {
+            animation-delay: 1s;
+        }
+
+        &.has-delay-2 {
+            animation-delay: 2s;
+        }
+    }
+}
+
+/* ==========================================================================
+8. Footer
+========================================================================== */
+
+.footer {
+    padding: 3rem 1.5rem !important;
+    background: $sidebar;
+
+    .footer-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .nephos {
+            padding: 5px 0;
+
+            .logo, .logo-text {
+                display: block;
+            }
+
+            .logo {
+                height: 45px;
+                margin: 10px auto;
+            }
+
+            .logo-text {
+                display: block;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: $white;
+                letter-spacing: 4px;
+                font-size: .9rem;
+            }
+        }
+
+        .ninja {
+            color: $white;
+            font-family: 'Raleway', sans-serif;
+            font-size: .75rem;
+
+            div {
+                margin: 5px 0;
+            }
+
+            .made-by {
+                display: flex;
+                align-items: center;
+            }
+
+            svg {
+                width: 14px;
+                height: 14px;
+                fill: $red;
+                stroke: $red;
+            }
+
+            .love {
+                margin: 0 5px;
+            }
+
+            a {
+                font-size: .85rem;
+                color: $secondary;
+
+                svg {
+                    width: 100px;
+                    height: 40px;
+                    stroke: $white;
+                    fill: $white;
+                    position: relative;
+                    top: 4px;
+                    left: 8px;
+                    transition: all .3s;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+
+                    svg {
+                        stroke: #be84f9;
+                        fill: #be84f9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+9. View demo links
+========================================================================== */
+
+//Link element
+.link-wrap {
+    position: relative;
+    line-height: 150%;
+}
+
+//Svg wrapper
+.stroke-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 30%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    //Button
+    .animated-button {
+        margin: 30px auto 0;
+        width: 280px;
+        height: 40px;
+        display: block;
+        text-transform: uppercase;
+
+        //Shape
+        .shape {
+            stroke-dasharray: 100 310;
+            stroke-dashoffset: -304;
+            stroke-width: 5px;
+            fill: transparent;
+            stroke: $dark-text;
+            -webkit-transition: stroke-width .7s, stroke-dashoffset .7s, stroke-dasharray .7s;
+            -ms-transition: stroke-width .7s, stroke-dashoffset .7s, stroke-dasharray .7s;
+            transition: stroke-width .7s, stroke-dashoffset .7s, stroke-dasharray .7s;
+        }
+
+        .text {
+            top: -37px;
+            position: relative;
+            color: $dark-text;
+            font-size: .8rem;
+            letter-spacing: 3px;
+            margin-right: -4px;
+        }
+
+        &:hover {
+            .shape {
+                stroke-width: 2px;
+                stroke-dashoffset: 0;
+                stroke-dasharray: 550;
+            }
+        }
+    }
+
+    .no-svg .animated-buttone {
+        color: $dark-text;
+        font-size: 1.7em;
+        line-height: 40px;
+        letter-spacing: 4px;
+        text-indent: 4px;
+        border: 2px solid $dark-text;
+    }
+}
+
+/* ==========================================================================
+10. Mobile media queries
+========================================================================== */
+
+@media (max-width: 767px) {
+    .typed-hero {
+        font-size: 2rem !important;
+    }
+
+    .title {
+        &.is-2 {
+            font-size: 2.2rem !important;
+
+            //min-height: 80px;
+       
+        }
+    }
+
+    .navbar {
+        &.is-light {
+            .navbar-menu {
+                background-color: $sidebar;
+
+                .feather-button {
+                    width: 100%;
+                }
+
+                .is-centered-responsive {
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                }
+            }
+
+            &.is-dark-mobile {
+                background: $sidebar !important;
+            }
+        }
+
+        &.is-fixed {
+            .feather-button {
+                width: 100%;
+            }
+
+            .is-centered-responsive {
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+
+    .is-responsive-centered {
+        text-align: center;
+
+        &.feature-divider {
+            margin: 20px auto !important;
+        }
+    }
+}
+
+/* ==========================================================================
+11. Tablet portrait orientation media queries
+========================================================================== */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    //Navbar
+    .navbar {
+        //Light navbar
+        &.is-light {
+            .navbar-menu {
+                background-color: $sidebar;
+
+                .feather-button {
+                    width: 100%;
+                }
+
+                .is-centered-responsive {
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                }
+            }
+
+            &.is-dark-mobile {
+                background: $sidebar !important;
+            }
+        }
+
+        //Fixed navbar
+        &.is-fixed {
+            .feather-button {
+                width: 100%;
+            }
+
+            .is-centered-responsive {
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+
+    //Spacing responsive helper classes
+    .is-responsive-centered, .is-centered-tablet-portrait {
+        text-align: center;
+
+        &.feature-divider {
+            margin: 20px auto !important;
+        }
+    }
+}
+
+/* ==========================================================================
+12. Info modal
+========================================================================== */
+
+.info-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($dark-text, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+
+    &.is-active {
+        opacity: 1;
+        pointer-events: all;
+
+        .info-card {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+    }
+
+    .info-card {
+        position: relative;
+        overflow: hidden;
+        width: calc(100% - 80px);
+        max-width: 1040px;
+        margin: 40px auto;
+        background: $white;
+        border-radius: 2px;
+        box-shadow: $light-box-shadow;
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(20px);
+        transition: all .4s ease-in-out;
+        transition-delay: .3s;
+
+        .close-link {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            height: 36px;
+            width: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+
+            svg {
+                height: 26px;
+                width: 26px;
+                stroke: $dark-text;
+                stroke-width: 1.4px;
+            }
+        }
+
+        .video-wrap {
+            width: 60%;
+        }
+
+        .video-meta {
+            width: 40%;
+        }
+
+        .video-wrap {
+            position: relative;
+            padding: 40px 20px 40px 40px;
+
+            iframe {
+                width: 100%;
+                height: 360px;
+                margin: 0 auto;
+                display: block;
+                border-radius: 4px;
+                box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12), 0 15px 12px rgba(0, 0, 0, 0.06);
+            }
+        }
+
+        .video-meta {
+            position: relative;
+            padding: 40px 40px 40px 20px;
+
+            .nephos-bg {
+                position: absolute;
+                bottom: -90px;
+                right: -100px;
+                max-width: 80%;
+                opacity: .3;
+                z-index: 0;
+            }
+
+            h3 {
+                font-family: 'Montserrat';
+                font-size: 1.4rem;
+                color: $dark-text;
+                margin-top: 0;
+            }
+
+            p, ul {
+                font-size: .9rem;
+                font-family: 'Montserrat';
+                color: lighten($dark-text, 8%);
+
+                b {
+                    color: $muted-grey;
+                    font-weight: 500;
+                }
+            }
+
+            small {
+                position: relative;
+                top: 1px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    //Demo info modal
+    .info-modal {
+        .info-card {
+            flex-direction: column;
+            width: calc(100% - 20px) !important;
+            margin: 10px !important;
+
+            .video-wrap {
+                width: 100%;
+                padding: 60px 20px 20px 20px;
+
+                iframe {
+                    height: 200px;
+                }
+            }
+
+            .video-meta {
+                width: 100%;
+                padding: 0 20px 20px 20px;
+            }
+        }
+    }
+}

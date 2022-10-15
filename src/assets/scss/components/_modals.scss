@@ -1,0 +1,762 @@
+/*! _modals.scss | Nephos | CSS Ninja */
+
+/* ==========================================================================
+Modal styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+1. Global styles
+2. Review Modal
+3. Wishlist Modal
+4. Add to wishlist modal
+5. Profile picture modal
+6. Checkout blocking modal
+=============================================================================
+***/
+
+/* ==========================================================================
+1. Global styles
+========================================================================== */
+
+.modal {
+    .modal-background {
+        background: rgba($primary, 0.3);
+    }
+}
+
+/* ==========================================================================
+2. Review Modal
+========================================================================== */
+
+.review-modal {
+    //Content
+    .modal-content {
+        max-width: 480px;
+
+        //Close modal button
+        .modal-delete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: $muted-grey;
+                cursor: pointer;
+
+                &:hover {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        //Inner box
+        .box {
+            padding: 0;
+            overflow: hidden;
+            transition: all .4s;
+            transform: scale(0);
+
+            //Header
+            .box-header {
+                width: 100%;
+                background: $fade-grey;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 10px 20px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    display: block;
+                    padding-left: 10px;
+                    color: $dark-text;
+                }
+
+                .delete {
+                    margin-left: auto;
+                }
+            }
+
+            .box-body {
+                padding: 20px;
+            }
+
+            p {
+                font-size: 85%;
+                color: $muted-grey;
+            }
+        }
+
+        //Labels
+        fieldset, label {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 99;
+        }
+
+        //ratings
+        .rating {
+            border: none;
+            float: left;
+        }
+
+        .rating > input {
+            display: none;
+        }
+
+        .rating > label:before {
+            margin: 5px;
+            font-size: 1.25em;
+            font-family: FontAwesome;
+            display: inline-block;
+            content: "\f005";
+        }
+
+        .rating > .half:before {
+            content: "\f089";
+            position: absolute;
+        }
+
+        .rating > label {
+            color: #ddd;
+            float: right;
+        }
+
+        //Highlight Stars on Hover
+        .rating > input:checked ~ label,
+        .rating:not(:checked) > label:hover,
+        .rating:not(:checked) > label:hover ~ label {
+            color: #FFD700 !important;
+        } //hover previous stars in list
+
+        .rating > input:checked + label:hover,
+        .rating > input:checked ~ label:hover,
+        .rating > label:hover ~ input:checked ~ label,
+        .rating > input:checked ~ label:hover ~ label {
+            color: #FFED85 !important;
+        }
+    }
+
+    //Active state
+    &.is-active {
+        .box {
+            transform: scale(1);
+        }
+    }
+}
+
+/* ==========================================================================
+3. Wishlist Modal
+========================================================================== */
+
+.wishlist-modal {
+    //Content
+    .modal-content {
+        max-width: 480px;
+
+        //Close modal button
+        .modal-delete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: $muted-grey;
+                cursor: pointer;
+
+                &:hover {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        //Inner box
+        .box {
+            padding: 0;
+            overflow: hidden;
+            transition: all .4s;
+            transform: scale(0);
+
+            //Header
+            .box-header {
+                width: 100%;
+                background: $fade-grey;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 10px 20px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    display: block;
+                    padding-left: 10px;
+                    color: $dark-text;
+                }
+
+                .delete {
+                    margin-left: auto;
+                }
+            }
+
+            .box-body {
+                padding: 20px;
+
+                img {
+                    display: block;
+                    max-width: 190px;
+                    margin: 20px auto;
+                }
+
+                .inner-content {
+                    text-align: center;
+                    max-width: 320px;
+                    margin: 0 auto;
+
+                    .input {
+                        margin-bottom: 10px;
+                    }
+
+                    .button-wrap {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            p {
+                font-size: 85%;
+                color: $muted-grey;
+                margin-bottom: 10px;
+            }
+        }
+
+        //Labels
+        fieldset, label {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 99;
+        }
+    }
+
+    //Active state
+    &.is-active {
+        .box {
+            transform: scale(1);
+        }
+    }
+}
+
+/* ==========================================================================
+4. Add to wishlist modal
+========================================================================== */
+
+.add-to-wishlist-modal {
+    //Content
+    .modal-content {
+        max-width: 480px;
+
+        //Close modal button
+        .modal-delete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: $muted-grey;
+                cursor: pointer;
+
+                &:hover {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        //Inner box
+        .box {
+            padding: 0;
+            overflow: hidden;
+            transition: all .4s;
+            transform: scale(0);
+
+            //Header
+            .box-header {
+                width: 100%;
+                background: $fade-grey;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 10px 20px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    display: block;
+                    padding-left: 10px;
+                    color: $dark-text;
+                }
+
+                .delete {
+                    margin-left: auto;
+                }
+            }
+
+            .box-body {
+                padding: 20px;
+
+                img {
+                    display: block;
+                    max-width: 190px;
+                    margin: 20px auto;
+                }
+
+                .inner-content {
+                    max-width: 320px;
+                    margin: 0 auto;
+
+                    .modal-placeholder {
+                        .placeholder-content {
+                            width: 100%;
+                            max-width: 340px;
+                            margin: 0 auto;
+                            text-align: center;
+
+                            img {
+                                display: block;
+                                max-width: 170px;
+                                margin: 0 auto 20px auto;
+                            }
+
+                            h3 {
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 1rem;
+                                font-weight: 600;
+                                color: $dark-text;
+                            }
+
+                            p {
+                                margin: 0 0 10px 0;
+                                color: $muted-grey;
+                                font-size: .9rem;
+                            }
+
+                            .button-wrap {
+                                margin: 10px 0;
+
+                                .button {
+                                    min-width: 160px;
+                                }
+                            }
+                        }
+                    }
+
+                    .message {
+                        .message-body {
+                            padding: 12px;
+                            font-size: .9rem;
+                            color: lighten($primary, 6%);
+                            border: 1px solid lighten($primary, 6%);
+                        }
+                    }
+
+                    .wishlist-modal-list {
+                        margin: 10px 0;
+
+                        ul {
+                            border: 1px solid $fade-grey;
+                            border-radius: 8px;
+                            padding: 12px;
+
+                            li {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                cursor: pointer;
+
+                                &.is-active {
+                                    background: transparent;
+
+                                    .meta {
+                                        span {
+                                            &.name {
+                                                color: $primary;
+                                            }
+                                        }
+                                    }
+
+                                    .selected-indicator {
+                                        background: $primary;
+                                        border-color: $primary;
+                                        box-shadow: $primary-box-shadow;
+                                        transform: scale(1);
+
+                                        svg {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+
+                                .meta {
+                                    text-align: left;
+
+                                    span {
+                                        display: block;
+
+                                        &.name {
+                                            font-weight: 500;
+                                        }
+
+                                        &.count {
+                                            color: $muted-grey;
+                                            font-size: .9rem;
+                                        }
+                                    }
+                                }
+
+                                .selected-indicator {
+                                    height: 34px;
+                                    width: 34px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                    border: 1px solid $fade-grey;
+                                    transform: scale(0.6);
+                                    transition: all .3s;
+
+                                    svg {
+                                        opacity: 0;
+                                        stroke: $white;
+                                        height: 16px;
+                                        width: 16px;
+                                        stroke-width: 3px;
+                                        transition: all .3s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .button-wrap {
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            p {
+                font-size: 85%;
+                color: $muted-grey;
+                margin: 10px 0;
+            }
+        }
+
+        //Labels
+        fieldset, label {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 99;
+        }
+    }
+
+    //Active state
+    &.is-active {
+        .box {
+            transform: scale(1);
+        }
+    }
+}
+
+/* ==========================================================================
+5. Profile picture modal
+========================================================================== */
+
+.upload-crop-modal {
+    //Content
+    .modal-content {
+        max-width: 480px;
+
+        //Close modal button
+        .modal-delete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: $muted-grey;
+                cursor: pointer;
+
+                &:hover {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        //Inner box
+        .box {
+            padding: 0;
+            overflow: hidden;
+            transition: all .4s;
+            transform: scale(0);
+
+            //Header
+            .box-header {
+                width: 100%;
+                background: $fade-grey;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 10px 20px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    display: block;
+                    padding-left: 10px;
+                    color: $dark-text;
+                }
+
+                .delete {
+                    margin-left: auto;
+                }
+            }
+
+            .box-body {
+                padding: 20px;
+
+                .profile-uploader-box {
+                    display: block;
+                    width: 100%;
+                    height: 300px;
+                    padding: 40px;
+                    border: 3px dashed $fade-grey;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        .inner-modal-content {
+                            position: relative;
+
+                            img {
+                                opacity: 1;
+                                -webkit-filter: grayscale(0);
+                                filter: grayscale(0);
+                            }
+                        }
+                    }
+
+                    .inner-modal-content {
+                        display: block;
+
+                        img {
+                            display: block;
+                            max-height: 110px;
+                            margin: 0 auto;
+                            opacity: .5;
+                            -webkit-filter: grayscale(1);
+                            filter: grayscale(1);
+                            transition: all .3s;
+                        }
+
+                        span {
+                            display: block;
+                            text-align: center;
+                            color: $placeholder;
+                            padding: 10px 0;
+                        }
+                    }
+
+                    input {
+                        display: none;
+                    }
+                }
+
+                .croppie-container {
+                    .cr-boundary {
+                        background-image: url(http://cdn.thedesigninspiration.com/wp-content/uploads/2014/07/Icon-Pattern-l.jpg);
+                        background-repeat: repeat;
+                        background-size: cover;
+                    }
+
+                    .cr-viewport {
+                        box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .cr-slider {
+                        cursor: pointer;
+                    }
+                }
+
+                .upload-help {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 6px;
+                }
+            }
+
+            p {
+                font-size: 85%;
+                color: $muted-grey;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    //Active state
+    &.is-active {
+        .box {
+            transform: scale(1);
+        }
+    }
+}
+
+/* ==========================================================================
+6. Checkout blocking modal
+========================================================================== */
+
+.checkout-blocked-modal, .checkout-unauth-modal {
+    .modal-background {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    //Content
+    .modal-content {
+        max-width: 480px;
+
+        //Close modal button
+        .modal-delete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: $muted-grey;
+                cursor: pointer;
+
+                &:hover {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        //Inner box
+        .box {
+            padding: 0;
+            overflow: hidden;
+            transition: all .4s;
+            transform: scale(0);
+            border: 1px solid darken($fade-grey, 2%);
+            box-shadow: $light-box-shadow;
+
+            &.scaled {
+                transform: scale(1);
+            }
+
+            //Header
+            .box-header {
+                width: 100%;
+                background: $fade-grey;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 10px 20px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    display: block;
+                    padding-left: 10px;
+                    color: $dark-text;
+                }
+
+                .delete {
+                    margin-left: auto;
+                }
+            }
+
+            .box-body {
+                padding: 20px;
+
+                .modal-placeholder {
+                    .placeholder-content {
+                        width: 100%;
+                        max-width: 340px;
+                        margin: 0 auto;
+                        text-align: center;
+
+                        img {
+                            display: block;
+                            max-width: 170px;
+                            margin: 0 auto 20px auto;
+                        }
+
+                        h3 {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 1rem;
+                            font-weight: 600;
+                            color: $dark-text;
+                        }
+
+                        p {
+                            margin: 0 0 10px 0;
+                            color: $muted-grey;
+                            font-size: .9rem;
+                        }
+
+                        .button-wrap {
+                            margin: 10px 0;
+
+                            .button {
+                                max-width: 180px;
+                                min-width: 180px;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
