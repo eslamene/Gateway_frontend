@@ -1,1 +1,1 @@
-# Gateway_frontend
+# e-Commerce Gateway Project Frontend
